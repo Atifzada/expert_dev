@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 // import "slick-carousel/slick/slick.css";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Manzar Alsamaa Tourism LLC",
-  description: "Tour and travel app",
+  title: "expert_dev",
+  description: "expert dev",
 };
 
 export default function RootLayout({
