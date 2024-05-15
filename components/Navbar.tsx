@@ -25,7 +25,7 @@ const Navbar = () => {
             <li key={link.key} className={`relative mx-4 text-black ${index === NAV_LINK.length - 1 ? 'last-item' : ''}`}>
               <Link href={link.href}>
                 <div className="flex items-center">
-                  <span className="inline-block transition-all duration-300 ease-in-out border-b-2 border-transparent font-medium text-15 text-black hover:border-custom-red">
+                  <span className="inline-block transition-all duration-300 ease-in-out border-b-2 border-transparent  text-16 font-Baloo font-semibold text-black hover:border-custom-red">
                     {link.label}
                   </span>
                 </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
             <FaPhone className="text-xl hover:text-black" />
           </div>
           <div className="pl-2 text-black">
-            <span className="text-16 font-semibold hover:text-custom-red">
+            <span className="text-16 font-Quicksand font-semibold hover:text-custom-red">
               +420 608 657 281
             </span>
           </div>
@@ -49,7 +49,7 @@ const Navbar = () => {
             className="text-white cursor-pointer bg-custom-red px-2 py-1 rounded-full transition-colors duration-300 hover:bg-black"
             style={{ borderBottomLeftRadius: "0" }}
           >
-            <span className="text-13">NEZÁVAZNÁ POPTÁVKA</span>
+            <span className="text-13 font-Quicksand font-normal">NEZÁVAZNÁ POPTÁVKA</span>
           </div>
         </div>
         <div className="pl-20 pr-6">
