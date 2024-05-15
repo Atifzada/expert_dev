@@ -52,7 +52,7 @@ const Navbar = () => {
             <span className="text-13">NEZÁVAZNÁ POPTÁVKA</span>
           </div>
         </div>
-        <div className="pl-16 pr-4">
+        <div className="pl-20 pr-6">
           <div className="group">
             <div className="bg-black text-white rounded-full border border-black p-2 group-hover:bg-custom-red group-hover:border-custom-red">
               <IoSearch className="text-xl cursor-pointer" />

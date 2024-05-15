@@ -11,11 +11,15 @@ const config: Config = {
       colors: {
         'custom-red':'#FF0066',
         'black':'#272727',
+        'custom-white':'#FFFFFF',
+        'custom-black':'#3B3B3B',
       },
       fontSize: {
+        '12': '12px',
         '13': '13px',
         '14': '14px',
         '15': '15px',
+        '22': '22px',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
