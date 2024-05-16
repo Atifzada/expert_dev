@@ -9,7 +9,7 @@ import { FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 left-0 w-full bg-black text-white">
+    <footer className=" bg-black text-white">
       <div className="bg-black items-center">
         <section className="flex gap-8 py-6 px-20">
           <div className="p-8">
@@ -66,11 +66,11 @@ const Footer = () => {
               marketingových kampaní.
             </span>
             <div className="flex gap-6 mt-6">
-              <MdOutlineFacebook className="text-white text-22 font-semibold" />
-              <FaTwitter className="text-white text-22 font-semibold" />
-              <RxLinkedinLogo className="text-white text-22 font-semibold" />
-              <FaYoutube className="text-white text-22 font-semibold" />
-              <FaInstagram className="text-white text-22 font-semibold" />
+            <MdOutlineFacebook className="text-white text-22 font-semibold hover:scale-110 transform transition duration-300" />
+              <FaTwitter className="text-white text-22 font-semibold hover:scale-110 transform transition duration-300" />
+              <RxLinkedinLogo className="text-white text-22 font-semibold hover:scale-110 transform transition duration-300" />
+              <FaYoutube className="text-white text-22 font-semibold hover:scale-110 transform transition duration-300" />
+              <FaInstagram className="text-white text-22 font-semibold hover:scale-110 transform transition duration-300" />
             </div>
           </div>
         </div>
