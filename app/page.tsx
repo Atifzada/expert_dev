@@ -1,10 +1,10 @@
 import React from "react";
-// import About from "@/components/About";
+import About from "@/components/About";
 
 const page = () => {
   return (
     <>
-    {/* <About /> */}
+    <About />
     </>
   )
 }

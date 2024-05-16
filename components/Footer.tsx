@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaRegBell, FaPhone, FaRegBuilding, FaInstagram } from "react-icons/fa";
@@ -6,10 +7,13 @@ import { MdOutlineFacebook, MdEmail } from "react-icons/md";
 import { FaYoutube } from "react-icons/fa";
 import { RxLinkedinLogo } from "react-icons/rx";
 import { FaTwitter } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Footer = () => {
+  const [hoveredItem, setHoveredItem] = useState("");
+
   return (
-    <footer className=" bg-black text-white">
+    <footer className="bg-black text-white">
       <div className="bg-black items-center">
         <section className="flex gap-8 py-6 px-20">
           <div className="p-8">
@@ -17,10 +21,7 @@ const Footer = () => {
               <Image src="/logo2.svg" alt="Logo" width={300} height={75} />
             </Link>
           </div>
-          <div className="main-search w-full flex items-center rounded-full bg-custom-black relative"
-                  style={{
-                    borderBottomLeftRadius: "0"}}
-          >
+          <div className="main-search w-full flex items-center rounded-full bg-custom-black relative" style={{ borderBottomLeftRadius: "0" }}>
             <div className="flex px-4">
               <FaRegBell className="text-6xl text-custom-red" />
               <div className="px-6">
@@ -66,7 +67,7 @@ const Footer = () => {
               marketingových kampaní.
             </span>
             <div className="flex gap-6 mt-6">
-            <MdOutlineFacebook className="text-white text-22 font-semibold hover:scale-110 transform transition duration-300" />
+              <MdOutlineFacebook className="text-white text-22 font-semibold hover:scale-110 transform transition duration-300" />
               <FaTwitter className="text-white text-22 font-semibold hover:scale-110 transform transition duration-300" />
               <RxLinkedinLogo className="text-white text-22 font-semibold hover:scale-110 transform transition duration-300" />
               <FaYoutube className="text-white text-22 font-semibold hover:scale-110 transform transition duration-300" />
@@ -75,28 +76,70 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex-col">
-          <h2 className="text-white font-Balloc font-semibold text-24">
+          <h2 className="text-white font-Balloc font-semibold text-24 ml-4">
             Naše služby
           </h2>
           <div className="mt-4">
-            <p className="text-white text-16 font-Ballo font-normal pb-4">
-              Tvorba webových stránek
-            </p>
-            <p className="text-white text-16 font-Ballo font-normal pb-4">
-              SEO
-            </p>
-            <p className="text-white text-16 font-Ballo font-normal pb-4">
-              Marketing a sociální sítě
-            </p>
-            <p className="text-white text-16 font-Ballo font-normal pb-4">
-              Grafika a vizualizace
-            </p>
-            <p className="text-white text-16 font-Ballo font-normal pb-4">
-              Vývoj aplikací PHP
-            </p>
-            <p className="text-white text-16 font-Ballo font-normal pb-4">
-              Vývoj aplikací Javascript
-            </p>
+            <div
+              className="text-white text-16 font-Ballo font-normal pb-4 relative"
+              onMouseEnter={() => setHoveredItem("Tvorba webových stránek")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              {hoveredItem === "Tvorba webových stránek" && (
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+              )}
+              <span className="ml-4">Tvorba webových stránek</span>
+            </div>
+            <div
+              className="text-white text-16 font-Ballo font-normal pb-4 relative"
+              onMouseEnter={() => setHoveredItem("SEO")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              {hoveredItem === "SEO" && (
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+              )}
+              <span className="ml-4">SEO</span>
+            </div>
+            <div
+              className="text-white text-16 font-Ballo font-normal pb-4 relative"
+              onMouseEnter={() => setHoveredItem("Marketing a sociální sítě")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              {hoveredItem === "Marketing a sociální sítě" && (
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+              )}
+              <span className="ml-4">Marketing a sociální sítě</span>
+            </div>
+            <div
+              className="text-white text-16 font-Ballo font-normal pb-4 relative"
+              onMouseEnter={() => setHoveredItem("Grafika a vizualizace")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              {hoveredItem === "Grafika a vizualizace" && (
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+              )}
+              <span className="ml-4">Grafika a vizualizace</span>
+            </div>
+            <div
+              className="text-white text-16 font-Ballo font-normal pb-4 relative"
+              onMouseEnter={() => setHoveredItem("Vývoj aplikací PHP")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              {hoveredItem === "Vývoj aplikací PHP" && (
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+              )}
+              <span className="ml-4">Vývoj aplikací PHP</span>
+            </div>
+            <div
+              className="text-white text-16 font-Ballo font-normal pb-4 relative"
+              onMouseEnter={() => setHoveredItem("Vývoj aplikací Javascript")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              {hoveredItem === "Vývoj aplikací Javascript" && (
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+              )}
+              <span className="ml-4">Vývoj aplikací Javascript</span>
+            </div>
           </div>
         </div>
         <div>
