@@ -21,6 +21,8 @@ const config: Config = {
         'custom-black':'#3B3B3B',
         'b-black':'#000000',
         'grey':'#5F5F5F',
+        'pink':'#FF0066',
+        'bb':'#333333',
       },
       fontSize: {
         '12': '12px',
@@ -33,11 +35,11 @@ const config: Config = {
         '24': '24px',
         '28': '28px',
         '32': '32px',
+        '40': '40px',
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        hero: "url('/shape1.png')",
+        video: "url('/video7.jpg')"
       },
     },
   },

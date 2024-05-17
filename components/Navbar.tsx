@@ -71,7 +71,7 @@ const Navbar = () => {
           <span className="text-16 font-Quicksand font-semibold hover:text-custom-red">+420 608 657 281</span>
         </div>
       </div>
-      <div className="ml-20">
+      <div className="ml-12">
         <div
           className="text-white cursor-pointer bg-custom-red px-2 py-1 rounded-full transition-colors duration-300 hover:bg-black"
           style={{ borderBottomLeftRadius: "0" }}
@@ -79,7 +79,7 @@ const Navbar = () => {
           <span className="text-13 font-Quicksand font-normal">NEZÁVAZNÁ POPTÁVKA</span>
         </div>
       </div>
-      <div className="pl-20 mr-4">
+      <div className="pl-16 mr-2">
         <div className="group flex gap-6">
           <div className="bg-black text-white rounded-full border border-black p-2 group-hover:bg-custom-red group-hover:border-custom-red">
             <IoSearch className="text-xl cursor-pointer" />
@@ -101,11 +101,11 @@ const Navbar = () => {
     <ul className="py-2 px-4">
       {NAV_LINK.find((link) => link.key === "reference")?.sublinks?.map((sublink, index) => (
         <li key={index}>
-          <div className="text-black hover:text-custom-red block py-2 px-4 border-b border-black">
+          {/* <div className="text-black hover:text-custom-red block py-2 px-4 border-b border-black">
           <span className="font-semibold font-QuickSand text-16" onClick={() => (window.location.href = sublink.href)}>
             {sublink.label}
             </span>
-          </div>
+          </div> */}
         </li>
       ))}
     </ul>

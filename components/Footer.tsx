@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaRegBell, FaPhone, FaRegBuilding, FaInstagram } from "react-icons/fa";
+import { FaRegBell, FaRegBuilding, FaInstagram } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineFacebook, MdEmail } from "react-icons/md";
 import { FaYoutube } from "react-icons/fa";
 import { RxLinkedinLogo } from "react-icons/rx";
@@ -15,13 +16,13 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white">
       <div className="bg-black items-center">
-        <section className="flex gap-8 py-6 px-20">
+        <section className="flex gap-8 py-6 px-12">
           <div className="p-8">
             <Link href="/" passHref>
               <Image src="/logo2.svg" alt="Logo" width={300} height={75} />
             </Link>
           </div>
-          <div className="main-search w-full flex items-center rounded-full bg-custom-black relative" style={{ borderBottomLeftRadius: "0" }}>
+          <div className="main-search w-[65%] flex items-center rounded-full bg-custom-black relative" style={{ borderBottomLeftRadius: "0" }}>
             <div className="flex px-4">
               <FaRegBell className="text-6xl text-custom-red" />
               <div className="px-6">
@@ -33,10 +34,10 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="w-[65%] relative">
+            <div className="w-[55%] relative">
               <div className="search flex justify-center items-center">
                 <input
-                  className="search_input w-full px-4 py-3 rounded-full bg-white pl-4 pr-16 font-semibold text-15 placeholder-b-black"
+                  className="search_input w-full pl-4 py-3 rounded-full bg-white pl-4 pr-16 font-semibold text-15 placeholder-b-black"
                   type="text"
                   placeholder="Váš e-mail"
                 />
@@ -86,7 +87,7 @@ const Footer = () => {
               onMouseLeave={() => setHoveredItem("")}
             >
               {hoveredItem === "Tvorba webových stránek" && (
-                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/3 transform -translate-y-2/3" />
               )}
               <span className="ml-4">Tvorba webových stránek</span>
             </div>
@@ -96,7 +97,7 @@ const Footer = () => {
               onMouseLeave={() => setHoveredItem("")}
             >
               {hoveredItem === "SEO" && (
-                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/3 transform -translate-y-2/3" />
               )}
               <span className="ml-4">SEO</span>
             </div>
@@ -106,7 +107,7 @@ const Footer = () => {
               onMouseLeave={() => setHoveredItem("")}
             >
               {hoveredItem === "Marketing a sociální sítě" && (
-                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/3 transform -translate-y-2/3" />
               )}
               <span className="ml-4">Marketing a sociální sítě</span>
             </div>
@@ -116,7 +117,7 @@ const Footer = () => {
               onMouseLeave={() => setHoveredItem("")}
             >
               {hoveredItem === "Grafika a vizualizace" && (
-                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/3 transform -translate-y-2/3" />
               )}
               <span className="ml-4">Grafika a vizualizace</span>
             </div>
@@ -126,7 +127,7 @@ const Footer = () => {
               onMouseLeave={() => setHoveredItem("")}
             >
               {hoveredItem === "Vývoj aplikací PHP" && (
-                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/3 transform -translate-y-2/3" />
               )}
               <span className="ml-4">Vývoj aplikací PHP</span>
             </div>
@@ -136,7 +137,7 @@ const Footer = () => {
               onMouseLeave={() => setHoveredItem("")}
             >
               {hoveredItem === "Vývoj aplikací Javascript" && (
-                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/2 transform -translate-y-2/3" />
+                <FaArrowRightLong className="text-custom-red mr-2 absolute left-0 top-1/3 transform -translate-y-2/3" />
               )}
               <span className="ml-4">Vývoj aplikací Javascript</span>
             </div>
@@ -153,7 +154,7 @@ const Footer = () => {
           </h2>
           <div className="call">
             <div className="flex gap-1 mt-4">
-              <FaPhone className="text-2xl pl-2 mt-1 text-custom-red" />
+              <FaPhoneAlt className="text-2xl pl-2 mt-1 text-custom-red" />
               <p className="text-white pl-2 font-normal text-16 font-Baloo">
                 Zavolejte nám
               </p>
