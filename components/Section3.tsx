@@ -1,11 +1,59 @@
 import React from "react";
 import { LuTriangleRight } from "react-icons/lu";
 import { CUSTOM_TABS } from "@/constant";
+import CardComponent from "./CardComponent";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
-const Section3 = () => {
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+
+// import { FreeMode, Pagination } from "swiper/modules";
+
+// import { RxArrowTopRight } from "react-icons/rx";
+
+const Section3: React.FC = () => {
+  const cardsData = [
+    {
+      title: "Webové stránky na míru",
+      description:
+        "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+      image: "/img11.jpg", // replace with your image path
+      tags: "BUSINESS - NEWS - SEO",
+    },
+    {
+      title: "Webové stránky ze šablony",
+      description:
+        "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+      image: "/img12.jpg", // replace with your image path
+      tags: "BUSINESS - MARKETING - SEO",
+    },
+    {
+      title: "Mikrostránky",
+      description:
+        "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+      image: "/img13.jpg", // replace with your image path
+      tags: "MARKETING - NEWS - SEO",
+    },
+    // {
+    //   title: "Mikrostránky",
+    //   description:
+    //     "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+    //   image: "/img21.jpg", // replace with your image path
+    //   tags: "MARKETING - NEWS - SEO",
+    // },
+    // {
+    //   title: "Mikrostránky",
+    //   description:
+    //     "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+    //   image: "/img22.jpg", // replace with your image path
+    //   tags: "MARKETING - NEWS - SEO",
+    // },
+  ];
+
   return (
     <section className="">
-      <div className="flex flex-col gap-6 items-center px-72 py-44 h-[70vh]">
+      <div className="flex flex-col gap-6 items-center px-56 py-44 h-auto">
         <div className="flex items-center">
           <LuTriangleRight className="text-pink" style={{ fill: "#FF0066" }} />
           <span className="text-16 text-pink font-QuickSand font-bold ml-2">
@@ -44,7 +92,9 @@ const Section3 = () => {
                       aria-controls={tab.key}
                       aria-selected="false"
                     >
-                      <span className="border-b-2 border-transparent hover:border-custom-red transition-all duration-500 ease-in">{tab.label}</span>
+                      <span className="border-b-2 border-transparent hover:border-custom-red transition-all duration-500 ease-in">
+                        {tab.label}
+                      </span>
                     </a>
                   </li>
                 ))}
@@ -65,7 +115,17 @@ const Section3 = () => {
               </div>
             </div>
             <div>
-                
+              <div className="flex justify-center gap-6 py-10">
+                {cardsData.map((card, index) => (
+                  <CardComponent
+                    key={index}
+                    title={card.title}
+                    description={card.description}
+                    image={card.image}
+                    tags={card.tags}
+                  />
+                ))}
+              </div>
             </div>
             <div></div>
           </div>
