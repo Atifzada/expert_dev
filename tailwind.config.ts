@@ -39,9 +39,13 @@ const config: Config = {
       },
       backgroundImage: {
         hero: "url('/shape1.png')",
-        video: "url('/video7.jpg')"
-      },
-    },
+        video: "url('/video7.jpg')",
+        img1: "url('/img1.jpg')",
+        img2: "url('/img2.jpg')",
+        img3: "url('/img3.jpg')",
+        img4: "url('/img4.jpg')",
+      }
+    }
   },
   plugins: [],
 };

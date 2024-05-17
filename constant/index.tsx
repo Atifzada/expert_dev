@@ -29,11 +29,40 @@ export const CUSTOM_TABS = [
   ];  
 
 export const CUSTOM_TABS_CONTENT = [
-    {
-        lable:"Weby",
-        title: "WEBOVÉ STRÁNKY NA MÍRU",
-        URL: "/img1.jpg",
-        // des:"3 places"
-        des:"Choreographed to music, the Dubai Fountain shoots water as high as 500 feet –that’s as high as a 50-story building. Designed by creators of the Fountains of Bellagio in Vegas, Dubai Fountain Performances occur daily on the 30-acre Burj Khalifa Lake"
-    },
+  {
+    // icon: RxCrop,
+    title: "Development",
+    content: "Lorem ipsum dolor sit /amet, consectetur adipiscing elit.",
+    backgroundImage: "url('/img1.jpg')",
+  },
+  {
+    // icon: RxPencil2,
+    title: "Branding",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    backgroundImage: "url('/img2.jpg')",
+  },
+  {
+    // icon: RxDesktop,
+    title: "Design",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    backgroundImage: "url('/img3.jpg')",
+  },
+  {
+    // icon: RxReader,
+    title: "Seo",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    backgroundImage: "url('/img4.jpg')",
+  },
+  {
+    // icon: RxAccessibility,
+    title: "Management",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    backgroundImage: "url('/img1.jpg')",
+  },
+  {
+    // icon: RxRocket,
+    title: "Production",
+    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    backgroundImage: "url('/img2.jpg')",
+  },
 ];  
