@@ -8,10 +8,38 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        QuickSand: ["QuickSand", "sans-serif"],
+        Baloo: ["Baloo Bhaina 2", "sans-serif"],
+        Roboto: ["Roboto", "sans-serif"],
+        Balooc: ["Baloo Chettan 2", "sans-serif"],
+      },
+      colors: {
+        'custom-red':'#FF0066',
+        'custom-white':'#FFFFFF',
+        'black':'#272727',
+        'custom-black':'#3B3B3B',
+        'b-black':'#000000',
+        'grey':'#5F5F5F',
+        'pink':'#FF0066',
+        'bb':'#333333',
+      },
+      fontSize: {
+        '12': '12px',
+        '13': '13px',
+        '14': '14px',
+        '15': '15px',
+        '16': '16px',
+        '18': '18px',
+        '22': '22px',
+        '24': '24px',
+        '28': '28px',
+        '32': '32px',
+        '40': '40px',
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        hero: "url('/shape1.png')",
+        video: "url('/video7.jpg')"
       },
     },
   },
