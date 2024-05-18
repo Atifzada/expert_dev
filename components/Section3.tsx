@@ -13,7 +13,7 @@ import "swiper/css/free-mode";
 // import { RxArrowTopRight } from "react-icons/rx";
 
 const Section3: React.FC = () => {
-  const cardsData = [
+  const CUSTOM_TABS_CONTENT = [
     {
       title: "Webové stránky na míru",
       description:
@@ -121,7 +121,7 @@ const Section3: React.FC = () => {
       </div>
       <div>
               <div className="flex justify-center gap-6 mb-28 mx-20">
-                {cardsData.map((card, index) => (
+                {CUSTOM_TABS_CONTENT.map((card, index) => (
                   <CardComponent
                     key={index}
                     title={card.title}
