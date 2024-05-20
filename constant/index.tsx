@@ -66,3 +66,31 @@ export const CUSTOM_TABS_CONTENT = [
     backgroundImage: "url('/img2.jpg')",
   },
 ];  
+
+
+
+
+
+
+// TEAM MEMBERS DATA
+
+export 
+const teamMembers = [
+    {
+        name: "John Doe",
+        bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Jiri_N_1.jpg",
+        description: "developer"
+    },
+    {
+        name: "Jane Smith",
+        bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
+        description: "designer"
+    },
+    {
+        name: "Pavel Janík",
+        bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Pavel_J_1.jpg",
+        description: "webdesign"
+    },
+    // Add more team members as needed
+  ];
+  
