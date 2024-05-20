@@ -8,14 +8,29 @@ interface ImageCardProps {
 
 const ImageCard: React.FC<ImageCardProps> = ({ name, bgImage, description }) => {
     return (
-        <div className="relative w-[40vw]  max-w-xs">
-            <div
-                className="h-80 bg-cover"
-                style={{ backgroundImage: `url(${bgImage})` }}
-            ></div>
-            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 p-4 flex flex-col items-center rounded-b-lg">
-                <h2 className="text-xl font-bold text-white">{name}</h2>
-                <span className="text-md text-white">{description}</span>
+        <div
+            className="relative flex-wrap min-h-[510px] w-[30vw] overflow-hidden flex justify-between items-end"
+            style={{
+                borderBottomLeftRadius: "0px",
+                borderBottomRightRadius: "100px",
+                borderTopLeftRadius: "100px",
+                borderTopRightRadius: "100px",
+                backgroundImage: `url(${bgImage})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+            }}
+        >
+            <div className="absolute inset-0 transition-all duration-300 to-transparent"></div>
+            <div className="absolute bottom-4 left-0 right-0 bg-bb p-4 flex flex-col items-center"
+                style={{
+                    borderBottomLeftRadius: "0px",
+                    borderBottomRightRadius: "0px",
+                    borderTopLeftRadius: "80px",
+                    borderTopRightRadius: "0px",
+                }}
+            >
+                <h2 className="text-40 font-bold text-white">{name}</h2>
+                <span className="text-16 text-custom-red font-QuickSand">{description}</span>
             </div>
         </div>
     );

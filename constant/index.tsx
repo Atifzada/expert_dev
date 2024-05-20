@@ -77,20 +77,66 @@ export const CUSTOM_TABS_CONTENT = [
 export 
 const teamMembers = [
     {
-        name: "John Doe",
+        name: "Jiří Nevařil",
         bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Jiri_N_1.jpg",
-        description: "developer"
+        description: "CEO, WEBDESIGN"
     },
     {
-        name: "Jane Smith",
+        name: "Martin Krátký",
         bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
-        description: "designer"
+        description: "CEO, OBCHOD"
     },
+
     {
         name: "Pavel Janík",
         bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Pavel_J_1.jpg",
-        description: "webdesign"
+        description: "WEBDESIGN"
     },
+    {
+      name: "Marek S.",
+      bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
+      description: "OBCHOD"
+  },
+  {
+    name: "Marek V.",
+    bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
+    description: "MARKETING"
+},
+{
+  name: "Radek K.",
+  bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
+  description: "MARKETING"
+},
+{
+  name: "Andrea G.",
+  bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
+  description: "COPYWRITING"
+},
+{
+  name: "Damir K.",
+  bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
+  description: "GRAFIKA"
+},
+{
+  name: "Filip K",
+  bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
+  description: "WEBDESIGN"
+},
+{
+  name: "Matyáš F.",
+  bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
+  description: "WEBDESIGN"
+},
+{
+  name: "Samuel K.",
+  bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
+  description: "WEBDESIGN"
+},
+{
+  name: "Martin B.",
+  bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Martin_K_1.jpg",
+  description: "WEBDESIGN"
+},
+
     // Add more team members as needed
   ];
-  
