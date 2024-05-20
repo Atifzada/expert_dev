@@ -7,41 +7,46 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: QuickSand, Baloo Bhaina 2, Roboto, sans-serif;
-}
-
 .placeholder-b-black::placeholder {
   color: #000000; /* Use the desired text color */
 }
 
-
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.dotted-line {
+  position: relative;
+  height: 150px;
+  border-left: 2px dotted rgba(160, 157, 157, 0.5); /* Add dotted line */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.circle {
+  width: 15px;
+  height: 15px;
+  background-color: custom-red; /* Custom red */
+  border-radius: 50%;
+  position: absolute;
+  top: -10px; /* Adjust to start at the center */
+  left: 50%;
+  transform: translateX(-50%);
+  animation: moveCircle 12s linear infinite alternate; /* Default animation */
+}
+
+.reverse-animation {
+  animation-name: moveCircleReverse; /* Apply reverse animation for 2nd circle */
+}
+
+@keyframes moveCircle {
+  from {
+    top: -10px; /* Adjust to start at the center */
+  }
+  to {
+    top: 150px; /* Adjust to end at the center */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes moveCircleReverse {
+  from {
+    top: 150px; /* Adjust to start at the center */
   }
-} */
+  to {
+    top: -10px; /* Adjust to end at the center */
+  }
+}

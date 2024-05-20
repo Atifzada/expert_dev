@@ -38,6 +38,8 @@ const config: Config = {
         '28': '28px',
         '32': '32px',
         '40': '40px',
+        '72': '72px',
+        '76': '76px',
       },
       backgroundImage: {
         hero: "url('/shape1.png')",
