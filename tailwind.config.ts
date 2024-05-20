@@ -9,20 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        QuickSand: ["QuickSand", "sans-serif"],
+        QuickSand: ["Quicksand", "sans-serif"],
         Baloo: ["Baloo Bhaina 2", "sans-serif"],
+        Baloo2: ["Baloo 2", "sans-serif"],
         Roboto: ["Roboto", "sans-serif"],
         Balooc: ["Baloo Chettan 2", "sans-serif"],
       },
       colors: {
-        'custom-red':'#FF0066',
-        'custom-white':'#FFFFFF',
-        'black':'#272727',
-        'custom-black':'#3B3B3B',
-        'b-black':'#000000',
-        'grey':'#5F5F5F',
-        'pink':'#FF0066',
-        'bb':'#333333',
+        'custom-red': '#FF0066',
+        'custom-white': '#FFFFFF',
+        'black': '#272727',
+        'custom-black': '#3B3B3B',
+        'b-black': '#000000',
+        'grey': '#5F5F5F',
+        'pink': '#FF0066',
+        'bb': '#333333',
       },
       fontSize: {
         '12': '12px',
@@ -31,6 +32,7 @@ const config: Config = {
         '15': '15px',
         '16': '16px',
         '18': '18px',
+        '20': '20px',
         '22': '22px',
         '24': '24px',
         '28': '28px',
