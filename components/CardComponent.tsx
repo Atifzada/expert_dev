@@ -7,26 +7,34 @@ interface CardProps {
   tags: string;
 }
 
-const CardComponent: React.FC<CardProps> = ({ title, description, image, tags }) => {
+const CardComponent: React.FC<CardProps> = ({
+  title,
+  description,
+  image,
+  tags,
+}) => {
   return (
-    <div className="group relative w-full max-w-sm overflow-hidden rounded-2xl shadow-lg transition-transform transform hover:scale-105">
+    <div className="relative w-full max-w-lg shadow-lg group">
       <img
         src={image}
         alt={title}
-        className="w-full h-full transition-transform transform group-hover:scale-110"
+        className="w-full h-full rounded-3xl transition-transform transform group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center p-4">
-        <h2 className="text-white text-lg font-bold">{title}</h2>
-        <p className="text-white text-sm">{tags}</p>
-        <hr className="border-pink-500 w-16 my-2" />
-        <p className="text-white text-center text-xs">{description}</p>
-        <button className="mt-4 bg-black bg-opacity-50 text-white p-2 rounded-full">
-          +
-        </button>
-      </div>
-      <div className="absolute bottom-4 left-4 bg-pink-500 text-white p-4 rounded-xl">
-        <h2 className="text-lg font-bold">{title}</h2>
-        <p className="text-sm">{tags}</p>
+      <div className="absolute bottom-0 left-0 w-full">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 text-white transition-all group-hover:translate-y-0 flex justify-center w-full">
+          <div className="bg-custom-red bg-opacity-100 flex-col justify-center items-center py-8 w-[80%] rounded-full text-center hover:bg-custom-red-hover" style={{ borderBottomLeftRadius: "0" }}>
+            <h2 className="text-lg font-bold hover:text-white hover:scale-110 transition-transform">{title}</h2>
+            <p className="text-sm hover:text-white hover:scale-110 transition-transform">{tags}</p>
+            <div className="hidden group-hover:block mt-2">
+              <hr className="border-white w-16 my-2" />
+              <p className="text-xs">{description}</p>
+              <button className="mt-4 bg-black bg-opacity-50 text-white p-2 rounded-full">
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full h-[75%] bg-custom-red bg-opacity-100 w-full rounded-2xl"style={{ borderBottomLeftRadius: "0" }}></div>
       </div>
     </div>
   );
