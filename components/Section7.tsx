@@ -44,7 +44,7 @@ const Section7 = () => {
                         Technologie pro naši práci
                     </h2>
                 </div>
-                <div className="w-[60%]">
+                <div className="w-1/2 mx-auto text-center">
                     <p className="text-center text-black leading-5 font-QuickSand font-medium">
                         Věříme, že technologie hrají klíčovou roli v dosažení vynikajících výsledků v digitálním marketingu. Proto investujeme do nejmodernějších technologií a nástrojů, které nám umožňují vytvářet inovativní a efektivní projekty pro naše klienty.
                     </p>
