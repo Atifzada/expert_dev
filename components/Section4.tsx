@@ -25,7 +25,7 @@ const Section4 = () => {
             </h2>
           </div>
           <div className="mt-8">
-            <p className="text-16 font-medium font-QuickSand text-black">
+            <p className="text-16 font-medium font-QuickSand text-bb">
               V Expert Dev je našim primárním cílem dosahovat vynikajících výsledků pro naše klienty. Máme komplexní tým zkušených profesionálů, díky kterým nabídneme širokou škálu služeb šitých na míru unikátním potřebám našich klientů. Jdeme s nejnovějšími trendy a řídíme naše strategie tak, abychom zajistili efektivní oslovení a zapojení různých skupin zákazníků. Díky tomuto přístupu se nám daří překonávat očekávání klientů a podporovat jejich úspěch a oboustrannou spokojenost.
             </p>
           </div>

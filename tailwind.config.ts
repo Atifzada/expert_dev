@@ -49,6 +49,9 @@ const config: Config = {
         img2: "url('/img2.jpg')",
         img3: "url('/img3.jpg')",
         img4: "url('/img4.jpg')",
+        eimg1: "url('/img4.jpg')",
+        eimg2: "url('/img4.jpg')",
+        eimg3: "url('/img4.jpg')",
       }
     }
   },
