@@ -32,7 +32,7 @@ const Section7 = () => {
 
     return (
         <section className="">
-            <div className="mx-20 flex flex-col gap-6 items-center">
+            <div className="mx-20 flex flex-col gap-2 items-center">
                 <div className="flex items-center">
                     <LuTriangleRight className="text-pink" style={{ fill: "#FF0066" }} />
                     <span className="text-16 text-pink font-QuickSand font-bold ml-2">

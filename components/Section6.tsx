@@ -50,7 +50,7 @@ const Section6 = () => {
 
     return (
         <section className="flex flex-col items-center justify-center mb-20 relative">
-            <div className="flex flex-col items-center justify-center gap-8">
+            <div className="flex flex-col items-center justify-center gap-2">
                 <div className="flex items-center justify-center">
                     <LuTriangleRight className="text-pink" style={{ fill: "#FF0066" }} />
                     <span className="text-16 text-pink font-QuickSand font-bold ml-4">
