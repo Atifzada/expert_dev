@@ -8,7 +8,7 @@ interface ImageCardProps {
 
 const ImageCard: React.FC<ImageCardProps> = ({ name, bgImage, description }) => {
     return (
-        <div className="group relative flex-wrap min-h-[500px] w-[28vw] overflow-hidden flex justify-between items-end mx-8 transform transition-transform duration-300 hover:scale-110"
+        <div className="group relative flex-wrap min-h-[500px] w-[28vw] overflow-hidden flex justify-between items-end mx-8 transform transition-transform duration-300 hover:translate-y-[-10px]"
             style={{
                 borderBottomLeftRadius: "0px",
                 borderBottomRightRadius: "100px",
@@ -28,7 +28,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ name, bgImage, description }) => 
                     borderTopRightRadius: "0px",
                 }}
             >
-                <h2 className="text-40 font-bold text-white">{name}</h2>
+                <h2 className="text-40 font-bold font-Balooc text-white">{name}</h2>
                 <span className="text-16 text-custom-red font-QuickSand">{description}</span>
             </div>
             {/* Small image that appears on hover */}
