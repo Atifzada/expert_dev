@@ -5,13 +5,13 @@ import { CUSTOM_TABS_SECTION_7, FRONTEND_techItems, BACKEND_techItems, MOBILE_AP
 
 const Section7 = () => {
     const [activeTab, setActiveTab] = useState("Frontend");
-    const [hoveredIndex, setHoveredIndex] = useState(null);
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // Change here
 
-    const handleTabClick = (tabKey) => {
+    const handleTabClick = (tabKey: string) => {
         setActiveTab(tabKey);
     };
 
-    let techItems = [];
+    let techItems: any[] = [];
 
     switch (activeTab) {
         case "Frontend":
@@ -85,11 +85,11 @@ const Section7 = () => {
                                         onMouseLeave={() => setHoveredIndex(null)}
                                     >
                                         <div className={`relative p-4 rounded-full ${hoveredIndex === index ? 'bg-custom-red scale-loop' : ''}`}>
-                                            <div className="relative w-16 h-16 overflow-hidden rounded-full">
+                                            <div className="relative w-16 h-16 rounded-full">
                                                 <img
                                                     src={hoveredIndex === index ? item.image2 : item.image}
                                                     alt={item.title}
-                                                    className="w-full h-full object-cover"
+                                                    className="w-full h-full object-contain"
                                                 />
                                             </div>
                                         </div>

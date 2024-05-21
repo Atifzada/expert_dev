@@ -46,7 +46,7 @@ export const FRONTEND_techItems = [
   },
   {
     image: "angular.webp",
-    image2: "angular.webp",
+    image2: "web3.webp",
     title: "Angular"
 },
   {
