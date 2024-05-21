@@ -74,8 +74,7 @@ export const CUSTOM_TABS_CONTENT = [
 
 // TEAM MEMBERS DATA
 
-export 
-const teamMembers = [
+export const teamMembers = [
     {
         name: "Jiří Nevařil",
         bgImage: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/Jiri_N_1.jpg",

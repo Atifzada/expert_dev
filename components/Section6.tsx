@@ -1,12 +1,41 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import ImageCard from "./ImageCard";
 import { LuTriangleRight } from "react-icons/lu";
 import { teamMembers } from "@/constant";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Section6 = () => {
+    const [slideIndex, setSlideIndex] = useState(0);
+    const [hoveredLeft, setHoveredLeft] = useState(false);
+    const [hoveredRight, setHoveredRight] = useState(false);
+
+    const cardsPerSlide = 1; // Default to 1 card per slide
+    const mdCardsPerSlide = 2; // 2 cards per slide on medium screens
+    const lgCardsPerSlide = 3; // 3 cards per slide on large screens
+    const numSlides = Math.ceil(teamMembers.length / cardsPerSlide);
+    const mdNumSlides = Math.ceil(teamMembers.length / mdCardsPerSlide);
+    const lgNumSlides = Math.ceil(teamMembers.length / lgCardsPerSlide);
+
+    const nextSlide = () => {
+        if (window.innerWidth >= 1024 && slideIndex < lgNumSlides - 1) {
+            setSlideIndex((prevIndex) => prevIndex + 1);
+        } else if (window.innerWidth >= 768 && window.innerWidth < 1024 && slideIndex < mdNumSlides - 1) {
+            setSlideIndex((prevIndex) => prevIndex + 1);
+        } else if (window.innerWidth < 768 && slideIndex < numSlides - 1) {
+            setSlideIndex((prevIndex) => prevIndex + 1);
+        }
+    };
+
+    const prevSlide = () => {
+        if (slideIndex > 0) {
+            setSlideIndex((prevIndex) => prevIndex - 1);
+        }
+    };
+
     return (
-        <section className="flex flex-col items-center justify-center mb-20">
-            <div className="flex flex-col items-center justify-center">
+        <section className="flex flex-col items-center justify-center mb-20 relative">
+            <div className="flex flex-col items-center justify-center gap-8">
                 <div className="flex items-center justify-center">
                     <LuTriangleRight className="text-pink" style={{ fill: "#FF0066" }} />
                     <span className="text-16 text-pink font-QuickSand font-bold ml-4">
@@ -26,15 +55,38 @@ const Section6 = () => {
             </div>
 
             {/* Image cards portion */}
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {teamMembers.map((member, index) => (
-                    <ImageCard
-                        key={index}
-                        bgImage={member.bgImage}
-                        name={member.name}
-                        description={member.description}
-                    />
-                ))}
+            <div className="w-full overflow-hidden relative">
+                <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${slideIndex * 100}%)` }}>
+                    {teamMembers.map((member, index) => (
+                        <div key={index} className="flex-none w-full md:w-1/2 lg:w-1/3">
+                            <ImageCard
+                                bgImage={member.bgImage}
+                                name={member.name}
+                                description={member.description}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Arrows */}
+            <div className="text-2xl w-full flex justify-center gap-6 relative mt-12 left-1/2 transform -translate-x-1/2">
+                <div
+                    className={`cursor-pointer rounded-full w-16 h-16 flex items-center justify-center transition duration-300 ${hoveredLeft ? 'bg-custom-red text-white' : 'border border-custom-red'} ${slideIndex === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    onMouseEnter={() => setHoveredLeft(true)}
+                    onMouseLeave={() => setHoveredLeft(false)}
+                    onClick={prevSlide}
+                >
+                    <FaArrowLeft className={hoveredLeft ? 'text-white' : 'text-custom-red'} />
+                </div>
+                <div
+                    className={`cursor-pointer rounded-full w-16 h-16 flex items-center justify-center transition duration-300 ${hoveredRight ? 'bg-custom-red text-white' : 'border border-custom-red'} ${slideIndex === (window.innerWidth >= 1024 ? lgNumSlides : window.innerWidth >= 768 ? mdNumSlides : numSlides) - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    onMouseEnter={() => setHoveredRight(true)}
+                    onMouseLeave={() => setHoveredRight(false)}
+                    onClick={nextSlide}
+                >
+                    <FaArrowRight className={hoveredRight ? 'text-white' : 'text-custom-red'} />
+                </div>
             </div>
         </section>
     );

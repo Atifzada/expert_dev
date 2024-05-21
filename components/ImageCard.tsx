@@ -9,7 +9,7 @@ interface ImageCardProps {
 const ImageCard: React.FC<ImageCardProps> = ({ name, bgImage, description }) => {
     return (
         <div
-            className="relative flex-wrap min-h-[510px] w-[30vw] overflow-hidden flex justify-between items-end"
+            className="relative flex-wrap min-h-[500px] w-[28vw] overflow-hidden flex justify-between items-end mx-8 transform transition-transform duration-300 hover:scale-110"
             style={{
                 borderBottomLeftRadius: "0px",
                 borderBottomRightRadius: "100px",
