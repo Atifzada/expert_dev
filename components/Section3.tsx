@@ -1,6 +1,6 @@
 import React from "react";
 import { LuTriangleRight } from "react-icons/lu";
-import { CUSTOM_TABS } from "@/constant";
+import { CUSTOM_TABS_SECTION_3 } from "@/constant";
 import CardComponent from "./CardComponent";
 // import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -82,7 +82,7 @@ const Section3: React.FC = () => {
                 role="tablist"
                 data-twe-nav-ref
               >
-                {CUSTOM_TABS.map((tab) => (
+                {CUSTOM_TABS_SECTION_3.map((tab) => (
                   <li key={tab.key} role="presentation">
                     <a
                       href={`#${tab.key}`}

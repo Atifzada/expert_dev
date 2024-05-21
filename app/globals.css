@@ -50,3 +50,25 @@
     top: -10px; /* Adjust to end at the center */
   }
 }
+
+@keyframes scaleLoop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.scale-loop {
+  animation: scaleLoop 1s infinite;
+}
+
+.hidden-title {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.visible-title {
+  opacity: 1;
+}
