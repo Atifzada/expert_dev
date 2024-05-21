@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ImageCard from "./ImageCard";
 import { LuTriangleRight } from "react-icons/lu";
 import { teamMembers } from "@/constant";
@@ -13,16 +13,31 @@ const Section6 = () => {
     const cardsPerSlide = 1; // Default to 1 card per slide
     const mdCardsPerSlide = 2; // 2 cards per slide on medium screens
     const lgCardsPerSlide = 3; // 3 cards per slide on large screens
-    const numSlides = Math.ceil(teamMembers.length / cardsPerSlide);
-    const mdNumSlides = Math.ceil(teamMembers.length / mdCardsPerSlide);
-    const lgNumSlides = Math.ceil(teamMembers.length / lgCardsPerSlide);
+    const [currentCardsPerSlide, setCurrentCardsPerSlide] = useState(cardsPerSlide);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1024) {
+                setCurrentCardsPerSlide(lgCardsPerSlide);
+            } else if (window.innerWidth >= 768) {
+                setCurrentCardsPerSlide(mdCardsPerSlide);
+            } else {
+                setCurrentCardsPerSlide(cardsPerSlide);
+            }
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    const numSlides = Math.ceil(teamMembers.length / currentCardsPerSlide);
 
     const nextSlide = () => {
-        if (window.innerWidth >= 1024 && slideIndex < lgNumSlides - 1) {
-            setSlideIndex((prevIndex) => prevIndex + 1);
-        } else if (window.innerWidth >= 768 && window.innerWidth < 1024 && slideIndex < mdNumSlides - 1) {
-            setSlideIndex((prevIndex) => prevIndex + 1);
-        } else if (window.innerWidth < 768 && slideIndex < numSlides - 1) {
+        if (slideIndex < numSlides - 1) {
             setSlideIndex((prevIndex) => prevIndex + 1);
         }
     };
@@ -55,7 +70,7 @@ const Section6 = () => {
             </div>
 
             {/* Image cards portion */}
-            <div className="w-full overflow-hidden relative">
+            <div className="mt-8 w-full overflow-hidden relative">
                 <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${slideIndex * 100}%)` }}>
                     {teamMembers.map((member, index) => (
                         <div key={index} className="flex-none w-full md:w-1/2 lg:w-1/3">
@@ -80,7 +95,7 @@ const Section6 = () => {
                     <FaArrowLeft className={hoveredLeft ? 'text-white' : 'text-custom-red'} />
                 </div>
                 <div
-                    className={`cursor-pointer rounded-full w-16 h-16 flex items-center justify-center transition duration-300 ${hoveredRight ? 'bg-custom-red text-white' : 'border border-custom-red'} ${slideIndex === (window.innerWidth >= 1024 ? lgNumSlides : window.innerWidth >= 768 ? mdNumSlides : numSlides) - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    className={`cursor-pointer rounded-full w-16 h-16 flex items-center justify-center transition duration-300 ${hoveredRight ? 'bg-custom-red text-white' : 'border border-custom-red'} ${slideIndex === numSlides - 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
                     onMouseEnter={() => setHoveredRight(true)}
                     onMouseLeave={() => setHoveredRight(false)}
                     onClick={nextSlide}
