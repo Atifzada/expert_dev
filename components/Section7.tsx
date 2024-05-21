@@ -31,8 +31,8 @@ const Section7 = () => {
     }
 
     return (
-        <section className="mb-20">
-            <div className="m-20 flex flex-col gap-6 items-center">
+        <section className="">
+            <div className="mx-20 flex flex-col gap-6 items-center">
                 <div className="flex items-center">
                     <LuTriangleRight className="text-pink" style={{ fill: "#FF0066" }} />
                     <span className="text-16 text-pink font-QuickSand font-bold ml-2">
@@ -74,7 +74,7 @@ const Section7 = () => {
                             ))}
                         </ul>
                         {/* Tabs content */}
-                        <div className="insert font-bold pb-16">
+                        <div className="insert font-bold">
                             <div className="mx-16 text-20 font-medium font-QuickSand flex gap-4 flex-wrap justify-center">
                                 {/* Map through the techItems array */}
                                 {techItems.map((item, index) => (
