@@ -4,7 +4,11 @@ import { LuTriangleRight } from "react-icons/lu";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import styled from 'styled-components';
 
-const SlideWrapper = styled.div`
+interface SlideWrapperProps {
+  index: number;
+}
+
+const SlideWrapper = styled.div<SlideWrapperProps>`
   display: flex;
   width: 100%;
   transition: transform 0.5s ease-in-out;
@@ -20,35 +24,39 @@ const Slide = styled.div`
 `;
 
 const slides = [
-  {
+
+{
     img: "https://vstupni.expert-dev.cz/wp-content/uploads/elementor/thumbs/spokojeni-klienti-qmjze6b01lb0jysuta0sr3hmvbqkuziiw8w93iyex0.png",
     title: "S konečným výsledkem webu jsme velmi spokojeni",
     text: "Nejdůležitejší pro naši kancelář je rychlá a pružná reakce na drobné změny na hotových webech. Vždy je nabízeno řešení, optimalizace pro různá zařízení a postupy, které nám vyhovují. Expert dev a pan Nevařil neprosazují tvrdohlavě svou a mají věcný a profesionální přístup. Kolegové, kteří obsluhují služby webu chválí jejich provedení. Mohu jen doporučit",
     rating: "Hodnocení 5/5",
     stars: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/05/hodnoceni-5.png"
-  },
-  {
+},
+
+{
     img: "https://vstupni.expert-dev.cz/wp-content/uploads/elementor/thumbs/spokojeni-klienti-qmjze6b01lb0jysuta0sr3hmvbqkuziiw8w93iyex0.png",
     title: "S konečným výsledkem webu jsme velmi spokojeni",
     text: "Nejdůležitejší pro naši kancelář je rychlá a pružná reakce na drobné změny na hotových webech. Vždy je nabízeno řešení, optimalizace pro různá zařízení a postupy, které nám vyhovují. Expert dev a pan Nevařil neprosazují tvrdohlavě svou a mají věcný a profesionální přístup. Kolegové, kteří obsluhují služby webu chválí jejich provedení. Mohu jen doporučit",
     rating: "Hodnocení 5/5",
     stars: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/05/hodnoceni-5.png"
-  },
-  {
+},
+
+{
     img: "https://vstupni.expert-dev.cz/wp-content/uploads/elementor/thumbs/spokojeni-klienti-qmjze6b01lb0jysuta0sr3hmvbqkuziiw8w93iyex0.png",
     title: "S konečným výsledkem webu jsme velmi spokojeni",
     text: "Nejdůležitejší pro naši kancelář je rychlá a pružná reakce na drobné změny na hotových webech. Vždy je nabízeno řešení, optimalizace pro různá zařízení a postupy, které nám vyhovují. Expert dev a pan Nevařil neprosazují tvrdohlavě svou a mají věcný a profesionální přístup. Kolegové, kteří obsluhují služby webu chválí jejich provedení. Mohu jen doporučit",
     rating: "Hodnocení 5/5",
     stars: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/05/hodnoceni-5.png"
-  },
-  {
+},
+
+{
     img: "https://vstupni.expert-dev.cz/wp-content/uploads/elementor/thumbs/spokojeni-klienti-qmjze6b01lb0jysuta0sr3hmvbqkuziiw8w93iyex0.png",
     title: "S konečným výsledkem webu jsme velmi spokojeni",
     text: "Nejdůležitejší pro naši kancelář je rychlá a pružná reakce na drobné změny na hotových webech. Vždy je nabízeno řešení, optimalizace pro různá zařízení a postupy, které nám vyhovují. Expert dev a pan Nevařil neprosazují tvrdohlavě svou a mají věcný a profesionální přístup. Kolegové, kteří obsluhují služby webu chválí jejich provedení. Mohu jen doporučit",
     rating: "Hodnocení 5/5",
     stars: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/05/hodnoceni-5.png"
-  },
-  // Add more slides as needed
+},
+  // ... (other slides)
 ];
 
 const Section10 = () => {
@@ -94,7 +102,7 @@ const Section10 = () => {
           {slides.map((slide, i) => (
             <Slide key={i}>
               <div className='recenze-stred text-center'>
-                <a tabIndex="0">
+                <a tabIndex={0}>
                   <span>
                     <img decoding="async" src={slide.img} title="spokojeni-klienti" alt="spokojeni-klienti" loading="lazy" className="rounded" />
                   </span>
