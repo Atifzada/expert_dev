@@ -24,6 +24,7 @@ const config: Config = {
         'grey': '#5F5F5F',
         'pink': '#FF0066',
         'bb': '#333333',
+        'p': '#FF006666',
       },
       fontSize: {
         '12': '12px',
@@ -37,6 +38,7 @@ const config: Config = {
         '24': '24px',
         '28': '28px',
         '32': '32px',
+        '36': '36px',
         '40': '40px',
         '72': '72px',
         '76': '76px',
