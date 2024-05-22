@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        Balooc: ["Baloo Chettan 2", "sans-serif"],
         QuickSand: ["Quicksand", "sans-serif"],
         Baloo: ["Baloo Bhaina 2", "sans-serif"],
         Baloo2: ["Baloo 2", "sans-serif"],
         Roboto: ["Roboto", "sans-serif"],
-        Balooc: ["Baloo Chettan 2", "sans-serif"],
       },
       colors: {
         'custom-red': '#FF0066',
