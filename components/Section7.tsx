@@ -32,7 +32,7 @@ const Section7 = () => {
 
     return (
         <section className="">
-            <div className="mx-20 flex flex-col gap-6 items-center">
+            <div className="mx-20 flex flex-col gap-2 items-center">
                 <div className="flex items-center">
                     <LuTriangleRight className="text-pink" style={{ fill: "#FF0066" }} />
                     <span className="text-16 text-pink font-QuickSand font-bold ml-2">
@@ -44,7 +44,7 @@ const Section7 = () => {
                         Technologie pro naši práci
                     </h2>
                 </div>
-                <div className="w-[60%]">
+                <div className="w-1/2 mx-auto text-center">
                     <p className="text-center text-black leading-5 font-QuickSand font-medium">
                         Věříme, že technologie hrají klíčovou roli v dosažení vynikajících výsledků v digitálním marketingu. Proto investujeme do nejmodernějších technologií a nástrojů, které nám umožňují vytvářet inovativní a efektivní projekty pro naše klienty.
                     </p>

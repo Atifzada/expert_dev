@@ -65,7 +65,7 @@ const Section3: React.FC = () => {
             Poskytujeme komplexní digitální služby
           </h2>
         </div>
-        <div className="w-[70%]">
+        <div className="w-1/2 mx-auto text-center">
           <p className="text-16 font-medium font-QuickSand text-black">
             Snažíme se pomáhat firmám v jejich růstu z hlediska zvýšení prodejů,
             získání potenciálních zákazníků a značek. Neustále pracujeme na tom,

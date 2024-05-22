@@ -12,7 +12,7 @@ const Section8 = () => {
   }, []);
 
   return (
-    <section className="relative h-60 mx-40 mt-8 mb-20 overflow-hidden">
+    <section className="relative h-60 mx-40 mt-8 mb-20 overflow-hidden rounded-xl">
       <div className="absolute top-0 left-0 w-full h-full flex transition-transform duration-1000" style={{ transform: `translateX(-${currentImage * 100}%)` }}>
         <div className="w-full flex-shrink-0">
           <img src="/img1.PNG" alt="Image 1" className="w-full h-full object-cover" />

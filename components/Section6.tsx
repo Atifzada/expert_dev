@@ -50,7 +50,7 @@ const Section6 = () => {
 
     return (
         <section className="flex flex-col items-center justify-center mb-20 relative">
-            <div className="flex flex-col items-center justify-center gap-8">
+            <div className="flex flex-col items-center justify-center gap-2">
                 <div className="flex items-center justify-center">
                     <LuTriangleRight className="text-pink" style={{ fill: "#FF0066" }} />
                     <span className="text-16 text-pink font-QuickSand font-bold ml-4">
@@ -62,8 +62,8 @@ const Section6 = () => {
                         Seznamte se s členy našeho <span className="text-custom-red">profesionálního</span> týmu
                     </h2>
                 </div>
-                <div className="mt-4 px-8">
-                    <p className="text-16 text-center font-medium font-QuickSand text-bb px-96">
+                <div className="mt-4 w-1/2 mx-auto text-center">
+                    <p className="text-16 text-center font-medium font-QuickSand text-bb">
                         Jsme tým mladých, zkušených a kreativních specialistů, kteří žijí pro nové technologie, sledují aktuální trendy a rádi se učí novým věcem. Prozkoumejte náš příběh neustálého vývoje a transformace, která nás dovedla k tomu, kým jsme dnes.
                     </p>
                 </div>
