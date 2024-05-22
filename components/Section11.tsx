@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay"; // Import autoplay styles
 
+// Initialize the Swiper modules
 Swiper.use([Navigation, Pagination, Autoplay]);
 
 const Section11 = () => {
@@ -37,9 +38,8 @@ const Section11 = () => {
         <section className="m-20 justify-center">
             <div className="container mx-auto">
                 <div className="flex justify-center">
-                    <div className="w-full max-w-6xl">
+                    <div className="w-full max-w-5xl">
                         <div className="swiper-container">
-                            {/* <div className="swiper-wrapper" style={{ display: "flex", alignItems: "center" }}> */}
                             <div className="swiper-wrapper justify-center">
                                 {/* Your slides */}
                                 <div className="swiper-slide">
@@ -56,9 +56,6 @@ const Section11 = () => {
                                 </div>
                             </div>
                             {/* Add pagination and navigation */}
-                            {/* <div className="swiper-pagination"></div>
-                            <div className="swiper-button-next"></div>
-                            <div className="swiper-button-prev"></div> */}
                         </div>
                     </div>
                 </div>
