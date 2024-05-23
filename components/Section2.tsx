@@ -1,5 +1,46 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { FaAtom, FaPlayCircle, FaStar } from "react-icons/fa";
+
+interface TypewriterProps {
+  text: string;
+  speed?: number;
+}
+
+const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 200 }) => {
+  useEffect(() => {
+    let i = 0;
+    let isDeleting = false;
+    let displayText = '';
+    const element = document.querySelector('.typewrite .obal-psani');
+
+    const type = () => {
+      if (element) { // Null check
+        if (isDeleting) {
+          displayText = text.substring(0, displayText.length - 1);
+        } else {
+          displayText = text.substring(0, displayText.length + 1);
+        }
+
+        element.innerHTML = displayText;
+
+        if (!isDeleting && displayText === text) {
+          setTimeout(() => {
+            isDeleting = true;
+          }, 2000);
+        } else if (isDeleting && displayText === '') {
+          isDeleting = false;
+        }
+
+        setTimeout(type, isDeleting ? speed / 2 : speed);
+      }
+    };
+
+    type();
+  }, [text, speed]);
+
+  return <span className="obal-psani text-black"></span>;
+};
 
 const Section2 = () => {
   return (
@@ -29,8 +70,23 @@ const Section2 = () => {
         </div>
 
         <div className="overlay w-1/5 my-6 mr-4 relative rounded-full">
-          <div className="relative rounded-full bg-cover bg-center h-full w-full"style={{ borderBottomRightRadius: "0", borderTopRightRadius: "0", backgroundImage: 'url(https://vstupni.expert-dev.cz/wp-content/uploads/2024/01/tvorba-webovych-stranek-pro-hotely-300x169.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className="elementor-background-overlay absolute inset-0 bg-p opacity-50 rounded-full" style={{borderBottomRightRadius: "0", borderTopRightRadius: "0"}}></div>
+          <div
+            className="relative rounded-full bg-cover bg-center h-full w-full"
+            style={{
+              borderBottomRightRadius: "0",
+              borderTopRightRadius: "0",
+              backgroundImage: 'url(https://vstupni.expert-dev.cz/wp-content/uploads/2024/01/tvorba-webovych-stranek-pro-hotely-300x169.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div
+              className="elementor-background-overlay absolute inset-0 bg-p opacity-50 rounded-full"
+              style={{
+                borderBottomRightRadius: "0",
+                borderTopRightRadius: "0",
+              }}
+            ></div>
             <div className="elementor-element elementor-element-9f1e0bf elementor-view-default elementor-widget elementor-widget-icon absolute inset-0 flex items-center justify-center">
               <div className="elementor-widget-container">
                 <div className="elementor-icon-wrapper">
@@ -68,20 +124,29 @@ const Section2 = () => {
             borderTopLeftRadius: "0",
           }}
         >
-          <div className="flex flex-col items-center">
-            <h2 className="text-16 font-semibold font-QuickSand">
-              Programováno
-            </h2>
-            <div className="text-28 font-semibold font-QuickSand mt-4">
+          <div className="flex flex-col items-center justify-center">
+            <div>
+              <h2 className="text-16 font-bold font-QuickSand">
+                Programováno
+              </h2>
+              <hr className="w-full border-t border-gray-500 my-2" />
+            </div>
+            <div className="text-22 font-bold font-QuickSand">
               5,000 h
             </div>
             <div className="psani-text mt-4">
-              <p className="typewrite" data-period="2000" data-type='[ "Hello World" ]'>
-                <span className="obal-psani"></span>
+              <p className="typewrite  text-20 text-black font-normal font-QuickSnad">
+                <Typewriter text="Hello World" speed={170} />
               </p>
             </div>
           </div>
         </div>
+      </div>
+      {/* Right animation  */}
+
+      <div>
+        {/* integrate here */}
+        
       </div>
     </section>
   );
