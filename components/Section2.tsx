@@ -42,14 +42,15 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 200 }) => {
     };
 
     type();
-  }, [text, speed]);
+  }, [text]);
 
   return <span className="obal-psani text-black"></span>;
 };
 
 const Section2 = () => {
   useEffect(() => {
-    const swiper = new Swiper(".elementor-image-carousel-wrapper", {
+    // Initialize Swiper
+    new Swiper(".elementor-image-carousel-wrapper", {
       loop: true,
       autoplay: {
         delay: 2000,
@@ -59,9 +60,9 @@ const Section2 = () => {
   }, []);
 
   return (
-    <section className="bg-hero bg-auto bg-left bg-no-repeat ">
+    <section className="bg-hero bg-auto bg-left bg-no-repeat pt-20">
 <div className="relative">
-<div className=" inset-0 flex items-center justify-center z-10">
+<div className=" inset-0 flex items-center justify-center z-30">
         <div className="w-[70%] flex gap-4 flex-wrap bg-black rounded-full ml-32 pl-24">
         <div className="w-1/4">
           <div className="absolute pt-4 pl-12 hidden lg:block">
@@ -153,36 +154,52 @@ const Section2 = () => {
             </div>
             <div className="psani-text mt-4">
               <p className="typewrite  text-20 text-black font-normal font-QuickSnad">
-                <Typewriter text="Hello World" speed={170} />
+                <Typewriter text="Hello World" speed={150} />
               </p>
             </div>
           </div>
         </div>
       </div>
 
-       {/* Right animation  */}
-       <div className="w-[20%] flex items-center justify-center">
-        <div className="w-full bg-custom-red p-4">
-          <div className="elementor-image-carousel-wrapper swiper-container swiper-container-initialized swiper-container-horizontal">
-            <div className="elementor-image-carousel swiper-wrapper">
-              <div className="swiper-slide swiper-slide-duplicate">
-                <img src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/google.png" alt="google" title="google" className="w-full h-auto text-white" />
+      {/* Right animation  */}
+      <div className="w-[20%] flex items-center justify-center">
+          <div className="elementor-image w-full bg-custom-red p-4">
+            {/* Swiper container */}
+            <div className="elementor-image-carousel-wrapper swiper-container">
+              {/* Swiper wrapper */}
+              <div className="swiper-wrapper">
+                {/* Individual slides */}
+                <div className="swiper-slide">
+                  <img
+                    src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/google.png"
+                    alt="google"
+                    title="google"
+                    className="w-full h-auto text-white"
+                  />
+                </div>
+                <div className="swiper-slide">
+                  <img
+                    src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/facebook.png"
+                    alt="facebook"
+                    title="facebook"
+                    className="w-full h-auto text-white"
+                  />
+                </div>
+                <div className="swiper-slide">
+                  <img
+                    src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/sklik.png"
+                    alt="sklik"
+                    title="sklik"
+                    className="w-full h-auto text-white"
+                  />
+                </div>
               </div>
-              <div className="swiper-slide swiper-slide-duplicate">
-                <img src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/facebook.png" alt="facebook" title="facebook" className="w-full h-auto text-white" />
-              </div>
-              <div className="swiper-slide swiper-slide-duplicate">
-                <img src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/sklik.png" alt="sklik" title="sklik" className="w-full h-auto text-white" />
-              </div>
+              <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
             </div>
-            <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
           </div>
         </div>
       </div>
-
       </div>
-
-</div>
     </section>
   );
 };
