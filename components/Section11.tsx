@@ -1,13 +1,14 @@
 "use client";
 import React, { useEffect } from "react";
-import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
+// import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay"; // Import autoplay styles
+import Swiper from "swiper";
 
 // Initialize the Swiper modules
-Swiper.use([Navigation, Pagination, Autoplay]);
+// Swiper.use([Navigation, Pagination, Autoplay]);
 
 const Section11 = () => {
     useEffect(() => {
@@ -29,9 +30,12 @@ const Section11 = () => {
             },
         });
 
-        return () => {
-            swiper.destroy();
-        };
+        // return () => {
+        //     if (swiper) {
+        //         swiper.destroy();
+        //     }
+        // };
+        
     }, []);
 
     return (
