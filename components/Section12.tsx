@@ -30,13 +30,13 @@ const Section12 = () => {
                     <form action="/#wpcf7-f33869-p33807-o1" method="post" className="w-full" aria-label="Kontaktní formulář" noValidate>
                         <div className="m--2 grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div>
-                                <input size="60" className="w-full bg-white rounded-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" placeholder="Jméno*" type="text" name="your-name" style={{ borderBottomLeftRadius: "0" }} />
+                                <input size={60} className="w-full bg-white rounded-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" placeholder="Jméno*" type="text" name="your-name" style={{ borderBottomLeftRadius: "0" }} />
                             </div>
                             <div>
-                                <input size="60" className="w-full bg-white rounded-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" placeholder="Telefon*" type="tel" name="phone" style={{ borderBottomLeftRadius: "0" }} />
+                                <input size={60} className="w-full bg-white rounded-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" placeholder="Telefon*" type="tel" name="phone" style={{ borderBottomLeftRadius: "0" }} />
                             </div>
                             <div>
-                                <input size="60" className="w-full bg-white rounded-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" placeholder="E-mail*" type="email" name="your-email" style={{ borderBottomLeftRadius: "0" }} />
+                                <input size={60} className="w-full bg-white rounded-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" placeholder="E-mail*" type="email" name="your-email" style={{ borderBottomLeftRadius: "0" }} />
                             </div>
                             <div className="font-Quicksand font-bol">
                                 <select className="w-full bg-white font-Quicksand font-bol rounded-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" name="vyber-pomoci" style={{ borderBottomLeftRadius: "0" }}>
@@ -47,7 +47,7 @@ const Section12 = () => {
                             </div>
                         </div>
                         <div className="mt-6">
-                            <textarea cols="40" rows="3" className="w-full bg-white rounded-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" placeholder="Zpráva..." name="your-message" style={{ borderBottomLeftRadius: "0", marginRight: "10px" }}></textarea>
+                            <textarea cols={40} rows={3} className="w-full bg-white rounded-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" placeholder="Zpráva..." name="your-message" style={{ borderBottomLeftRadius: "0", marginRight: "10px" }}></textarea>
                         </div>
                         <div className="mt-4 flex justify-center">
                             <div className="bg-custom-red flex items-center rounded-full px-4">
