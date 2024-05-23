@@ -10,21 +10,25 @@ import Section8 from "@/components/Section8";
 import Section10 from "@/components/Section10";
 import Section11 from "@/components/Section11";
 import Section12 from "@/components/Section12";
+import Reference from "@/components/Reference";
 
 const page1 = () => {
   return (
     <>
-    <Section1 />
-    <Section2 />
-    <Section3 />
-    <Section4 />
-    <Section5 />
-    <Section6 />
-    <Section7 />
-    <Section8 />
-    <Section10 />
-    <Section11 />
-    <Section12 />
+
+      <Section1 />
+      {/* <Section2 /> */}
+      <Section3 />
+      <Section4 />
+      <Section5 />
+      <Section6 />
+      <Section7 />
+      <Section8 />
+      <Reference />
+      <Section10 />
+      <Section11 />
+      <Section12 />
+
     </>
   )
 }
