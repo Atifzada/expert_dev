@@ -30,9 +30,12 @@ const Section11 = () => {
             },
         });
 
-        return () => {
-            swiper.destroy();
-        };
+        // return () => {
+        //     if (swiper) {
+        //         swiper.destroy();
+        //     }
+        // };
+        
     }, []);
 
     return (

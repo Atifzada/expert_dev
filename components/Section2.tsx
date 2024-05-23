@@ -1,6 +1,11 @@
 "use client";
 import React, { useEffect } from "react";
 import { FaAtom, FaPlayCircle, FaStar } from "react-icons/fa";
+import Swiper from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay"; // Import autoplay styles
 
 interface TypewriterProps {
   text: string;
@@ -43,9 +48,21 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 200 }) => {
 };
 
 const Section2 = () => {
+  useEffect(() => {
+    const swiper = new Swiper(".elementor-image-carousel-wrapper", {
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        reverseDirection: true, // To run the swiper from right to left
+      },
+    });
+  }, []);
+
   return (
-    <section className="bg-hero bg-auto bg-left bg-no-repeat h-auto px-60 pt-20">
-      <div className="flex gap-4 flex-wrap bg-black rounded-full pl-24">
+    <section className="bg-hero bg-auto bg-left bg-no-repeat ">
+<div className="relative">
+<div className=" inset-0 flex items-center justify-center z-10">
+        <div className="w-[70%] flex gap-4 flex-wrap bg-black rounded-full ml-32 pl-24">
         <div className="w-1/4">
           <div className="absolute pt-4 pl-12 hidden lg:block">
             <FaStar className="text-xl text-white" />
@@ -142,12 +159,30 @@ const Section2 = () => {
           </div>
         </div>
       </div>
-      {/* Right animation  */}
 
-      <div>
-        {/* integrate here */}
-        
+       {/* Right animation  */}
+       <div className="w-[20%] flex items-center justify-center">
+        <div className="w-full bg-custom-red p-4">
+          <div className="elementor-image-carousel-wrapper swiper-container swiper-container-initialized swiper-container-horizontal">
+            <div className="elementor-image-carousel swiper-wrapper">
+              <div className="swiper-slide swiper-slide-duplicate">
+                <img src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/google.png" alt="google" title="google" className="w-full h-auto text-white" />
+              </div>
+              <div className="swiper-slide swiper-slide-duplicate">
+                <img src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/facebook.png" alt="facebook" title="facebook" className="w-full h-auto text-white" />
+              </div>
+              <div className="swiper-slide swiper-slide-duplicate">
+                <img src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/sklik.png" alt="sklik" title="sklik" className="w-full h-auto text-white" />
+              </div>
+            </div>
+            <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div>
+        </div>
       </div>
+
+      </div>
+
+</div>
     </section>
   );
 };
