@@ -54,7 +54,7 @@ const Section12 = () => {
                             </div>
                         </div>
                         <div className="mt-6">
-                            <textarea cols="40" rows="3" className="w-full bg-white rounded py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" placeholder="Zpráva..." name="your-message"></textarea>
+                            <textarea cols="40" rows="3" className="w-full bg-white rounded-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:bg-white" aria-required="true" aria-invalid="false" placeholder="Zpráva..." name="your-message" style={{ borderBottomLeftRadius: "0", marginRight: "10px" }}></textarea>
                         </div>
                         <div className="mt-4 flex justify-center">
                             <div className="bg-custom-red flex items-center rounded-full px-4">

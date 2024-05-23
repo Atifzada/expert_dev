@@ -28,7 +28,7 @@ const Section2 = () => {
           </div>
         </div>
 
-        <div className="overlay w-1/4 my-6 mr-4 relative rounded-full">
+        <div className="overlay w-1/5 my-6 mr-4 relative rounded-full">
           <div className="relative rounded-full bg-cover bg-center h-full w-full"style={{ borderBottomRightRadius: "0", borderTopRightRadius: "0", backgroundImage: 'url(https://vstupni.expert-dev.cz/wp-content/uploads/2024/01/tvorba-webovych-stranek-pro-hotely-300x169.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="elementor-background-overlay absolute inset-0 bg-p opacity-50 rounded-full" style={{borderBottomRightRadius: "0", borderTopRightRadius: "0"}}></div>
             <div className="elementor-element elementor-element-9f1e0bf elementor-view-default elementor-widget elementor-widget-icon absolute inset-0 flex items-center justify-center">
@@ -43,7 +43,7 @@ const Section2 = () => {
           </div>
         </div>
 
-        <div className="w-1/6 flex flex-col items-center justify-center my-6">
+        <div className="w-1/5 flex flex-col items-center justify-center my-6">
           <div className="flex flex-col gap-2 items-center justify-center bg-white p-4">
             <img
               src="https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/google_logo.png"
