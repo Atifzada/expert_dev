@@ -12,6 +12,10 @@
 @tailwind components;
 @tailwind utilities; */
 
+.font-Balooc {
+    font-family: 'Baloo Chettan 2', sans-serif;
+}
+
 .placeholder-b-black::placeholder {
   color: #000000; /* Use the desired text color */
 }
