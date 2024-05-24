@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="w-[55%] relative">
               <div className="search flex justify-center items-center">
                 <input
-                  className="search_input w-full pl-4 py-3 rounded-full bg-white pl-4 pr-16 font-semibold text-15 placeholder-b-black"
+                  className="search_input w-full pl-4 py-3 rounded-full bg-white pr-16 font-semibold text-15 placeholder-b-black"
                   type="text"
                   placeholder="Váš e-mail"
                 />
