@@ -30,7 +30,7 @@ const Section13 = () => {
                 <div className="grid grid-flow grid-cols-4 grid-rows-2 gap-6 min-h-[80vh]">
                     <div className="col-span-2 flex flex-col gap-6">
                     <div className="bg-blog1 bg-no-repeat bg-center rounded-[64px] duration-300 relative border-transparent border-4 hover:border-custom-red cursor-pointer" style={{ borderBottomLeftRadius: "0", backgroundSize: "cover" }}>
-                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-50 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
+                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-30 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
                             <div className="min-h-[65vh] flex items-end p-4">
                                 <p className="text-white text-12 font-QuickSand font-medium px-3 py-1 bg-custom-red rounded-full" style={{ borderBottomLeftRadius: "0" }}>BLOG</p>
                             </div>
@@ -48,7 +48,7 @@ const Section13 = () => {
                     
                     <div className="flex flex-col gap-6">
                     <div className="bg-blog2 bg-no-repeat bg-center rounded-[64px] duration-300 relative border-transparent border-4 hover:border-custom-red cursor-pointer" style={{ borderBottomLeftRadius: "0", backgroundSize: "cover" }}>
-                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-50 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
+                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-30 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
                             <div className="min-h-[30vh] flex items-end p-4">
                                 <p className="text-white text-12 font-QuickSand font-medium px-3 py-1 bg-custom-red rounded-full" style={{ borderBottomLeftRadius: "0" }}>BLOG</p>
                             </div>
@@ -69,7 +69,7 @@ const Section13 = () => {
 
                     <div className="flex flex-col gap-6">
                     <div className="bg-blog3 bg-no-repeat bg-center rounded-[64px] duration-300 relative border-transparent border-4 hover:border-custom-red cursor-pointer" style={{ borderBottomLeftRadius: "0", backgroundSize: "cover" }}>
-                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-50 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
+                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-30 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
                             <div className="min-h-[30vh] flex items-end p-4">
                                 <p className="text-white text-12 font-QuickSand font-medium px-3 py-1 bg-custom-red rounded-full" style={{ borderBottomLeftRadius: "0" }}>BLOG</p>
                             </div>
@@ -90,7 +90,7 @@ const Section13 = () => {
 
                     <div className="flex flex-col gap-6">
                     <div className="bg-blog4 bg-no-repeat bg-center rounded-[64px] duration-300 relative border-transparent border-4 hover:border-custom-red cursor-pointer" style={{ borderBottomLeftRadius: "0", backgroundSize: "cover" }}>
-                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-50 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
+                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-30 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
                             <div className="min-h-[30vh] flex items-end p-4">
                                 <p className="text-white text-12 font-QuickSand font-medium px-3 py-1 bg-custom-red rounded-full" style={{ borderBottomLeftRadius: "0" }}>BLOG</p>
                             </div>
@@ -108,7 +108,7 @@ const Section13 = () => {
 
                     <div className="flex flex-col gap-6">
                     <div className="bg-blog5 bg-no-repeat bg-center rounded-[64px] duration-300 relative border-transparent border-4 hover:border-custom-red cursor-pointer" style={{ borderBottomLeftRadius: "0", backgroundSize: "cover" }}>
-                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-50 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
+                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-30 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
                             <div className="min-h-[30vh] flex items-end p-4">
                                 <p className="text-white text-12 font-QuickSand font-medium px-3 py-1 bg-custom-red rounded-full" style={{ borderBottomLeftRadius: "0" }}>BLOG</p>
                             </div>
@@ -126,7 +126,7 @@ const Section13 = () => {
 
                     <div className="flex flex-col gap-6">
                     <div className="bg-blog6 bg-no-repeat bg-center rounded-[64px] duration-300 relative border-transparent border-4 hover:border-custom-red cursor-pointer" style={{ borderBottomLeftRadius: "0", backgroundSize: "cover" }}>
-                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-50 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
+                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-30 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
                             <div className="min-h-[30vh] flex items-end p-4">
                                 <p className="text-white text-12 font-QuickSand font-medium px-3 py-1 bg-custom-red rounded-full" style={{ borderBottomLeftRadius: "0" }}>BLOG</p>
                             </div>
@@ -144,7 +144,7 @@ const Section13 = () => {
 
                     <div className="flex flex-col gap-6">
                         <div className="bg-blog7 bg-no-repeat bg-center rounded-[64px] duration-300 relative border-transparent border-4 hover:border-custom-red cursor-pointer" style={{ borderBottomLeftRadius: "0", backgroundSize: "cover" }}>
-                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-50 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
+                            <div className="absolute inset-0 bg-custom-red opacity-0 hover:opacity-30 rounded-[60px]" style={{ borderBottomLeftRadius: "0" }}></div>
                             <div className="min-h-[30vh] flex items-end p-4">
                                 <p className="text-white text-12 font-QuickSand font-medium px-3 py-1 bg-custom-red rounded-full" style={{ borderBottomLeftRadius: "0" }}>BLOG</p>
                             </div>
