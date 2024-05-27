@@ -19,46 +19,7 @@ export const NAV_LINK = [
   { href: "", key: "contact", label: "Kontakt" },
 ];
 
-// // CUSTOM_TABS_SECTION_3
-// export const CUSTOM_TABS_SECTION_3 = [
-//   { href: "", key: "weby", label: "Weby" },
-//   { href: "", key: "eshopy", label: "Eshopy" },
-//   { href: "", key: "seo", label: "SEO" },
-//   { href: "", key: "online-marketing", label: "Online marketing" },
-//   { href: "", key: "grafika", label: "Grafika" },
-//   { href: "", key: "vyvoj-aplikaci", label: "Vývoj aplikací" },
-// ];
 
-// export const weby_items  = [
-//   {
-//     title: "Webové stránky na míru",
-//     description:
-//       "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
-//     image: "/img11.jpg", // replace with your image path
-//     tags: "BUSINESS - NEWS - SEO",
-//   },
-//   {
-//     title: "Webové stránky ze šablony",
-//     description:
-//       "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
-//     image: "/img12.jpg", // replace with your image path
-//     tags: "BUSINESS - MARKETING - SEO",
-//   },
-//   {
-//     title: "Mikrostránky",
-//     description:
-//       "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
-//     image: "/img13.jpg", // replace with your image path
-//     tags: "MARKETING - NEWS - SEO",
-//   },
-// ];
-
-
-
-
-
-
-// index.js
 export const TABS_DATA = [
   {
     key: "weby",
@@ -128,19 +89,20 @@ export const TABS_DATA = [
     label: "seo",
     content: [
       {
-        title: "Analyza klicovych slov",
-        description:
-          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
-        image:"/ppc-systemy.jpg",
-        tags: "BRANDING - NEWS - SEO",
-      },
-      {
         title: "Audit webových stránek",
         description:
           "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
         image: "/audit-webovych-stranek.jpg",
         tags: "BRANDING - NEWS - SEO",
       },
+      {
+        title: "Analyza klicovych slov",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image:"/ppc-systemy.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+
       {
         title: "Poradenství a konzultace",
         description:
@@ -229,8 +191,9 @@ export const TABS_DATA = [
   },
   
   {
-    key: "vyvoj-aplikaci",
-    label: "vyvoj-aplikaci",
+    key: "grafika",
+    label: "grafika",
+
     content: [
       {
         title: "Firemní identita",
@@ -278,8 +241,8 @@ export const TABS_DATA = [
   },
 
   {
-    key: "grafika",
-    label: "grafika",
+    key: "vyvoj-aplikaci",
+    label: "vyvoj-aplikaci",
     content: [
       {
         title: "Vývoj webových aplikací",

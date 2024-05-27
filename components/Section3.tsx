@@ -1,5 +1,5 @@
-"use client";
-import { LuTriangleRight } from "react-icons/lu";
+"use client"
+"use client"
 import React, { useState, useEffect } from "react";
 import { TABS_DATA } from "@/constant";
 import CardComponent from "./CardComponent";
@@ -33,17 +33,29 @@ const Section3: React.FC = () => {
   };
 
   const getVisibleCards = () => {
-    const currentTab = TABS_DATA.find(tab => tab.key === activeTab);
+    const currentTab = TABS_DATA.find((tab) => tab.key === activeTab);
     if (currentTab) {
       const cardsPerView = getCardsPerView();
-      const startIndex = Math.min(currentSlide, currentTab.content.length - cardsPerView);
-      return currentTab.content.slice(startIndex, startIndex + cardsPerView);
+      let startIndex = currentSlide * cardsPerView;
+
+      // Adjust startIndex based on screen size
+      if (windowSize >= 1024) {
+        startIndex = Math.max(0, startIndex - 2); // Show 2 preceding cards for lg screens
+      } else if (windowSize >= 768) {
+        startIndex = Math.max(0, startIndex - 1); // Show 1 preceding card for md screens
+      }
+
+      const endIndex = Math.min(startIndex + cardsPerView, currentTab.content.length);
+      console.log("Start Index:", startIndex);
+      console.log("End Index:", endIndex);
+      
+      return currentTab.content.slice(startIndex, endIndex);
     }
     return [];
   };
 
   const getTotalDots = () => {
-    const currentTab = TABS_DATA.find(tab => tab.key === activeTab);
+    const currentTab = TABS_DATA.find((tab) => tab.key === activeTab);
     if (currentTab) {
       const cardsPerView = getCardsPerView();
       return Math.ceil(currentTab.content.length / cardsPerView);
@@ -58,7 +70,7 @@ const Section3: React.FC = () => {
     <section className="">
       <div className="flex flex-col gap-6 items-center px-20 pt-44 h-auto">
         <div className="flex items-center">
-          <LuTriangleRight className="text-pink" style={{ fill: "#FF0066" }} />
+          <span>Icon Placeholder</span>
           <span className="text-16 text-pink font-QuickSand font-bold ml-2">
             NAŠE SLUŽBY
           </span>
@@ -77,7 +89,7 @@ const Section3: React.FC = () => {
           </p>
         </div>
         <div>
-          <div className="py-8 w-full flex flex-col justify-center items-center gap-2">
+          <div className="py-8 w-full flex flex-col justify-center items-center gap-4">
             <div className="tabs">
               <ul
                 className="mb-5 flex list-none flex-row flex-wrap border-b-0 ps-0 justify-center items-center"
@@ -123,7 +135,7 @@ const Section3: React.FC = () => {
                   {Array.from({ length: totalDots }).map((_, index) => (
                     <GoDot
                       key={index}
-                      className={`text-3xl cursor-pointer fill-gray-400 hover:fill-custom-red transition-all duration-300 ${index === currentSlide ? 'fill-custom-red' : 'fill-gray-400'}`}
+                      className={`text-3xl cursor-pointer ${index === currentSlide ? 'text-custom-red' : 'text-gray-400 hover:text-custom-red transition-all duration-300'}`}
                       onClick={() => handleDotClick(index)}
                     />
                   ))}
