@@ -1,18 +1,58 @@
 "use client";
 import { LuTriangleRight } from "react-icons/lu";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TABS_DATA } from "@/constant";
 import CardComponent from "./CardComponent";
 import { GoDot } from "react-icons/go";
 
 const Section3: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>(TABS_DATA[0].key);
+  const [activeTab, setActiveTab] = useState<string>(TABS_DATA[0]?.key || "");
+  const [windowSize, setWindowSize] = useState<number>(0);
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleTabClick = (tabKey: string) => {
     setActiveTab(tabKey);
+    setCurrentSlide(0);
   };
 
-  console.log(TABS_DATA);
+  const handleDotClick = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  const getCardsPerView = () => {
+    return windowSize >= 1024 ? 3 : windowSize >= 768 ? 2 : 1;
+  };
+
+  const getVisibleCards = () => {
+    const currentTab = TABS_DATA.find(tab => tab.key === activeTab);
+    if (currentTab) {
+      const cardsPerView = getCardsPerView();
+      const startIndex = Math.min(currentSlide, currentTab.content.length - cardsPerView);
+      return currentTab.content.slice(startIndex, startIndex + cardsPerView);
+    }
+    return [];
+  };
+
+  const getTotalDots = () => {
+    const currentTab = TABS_DATA.find(tab => tab.key === activeTab);
+    if (currentTab) {
+      const cardsPerView = getCardsPerView();
+      return Math.ceil(currentTab.content.length / cardsPerView);
+    }
+    return 0;
+  };
+
+  const totalDots = getTotalDots();
+  const visibleCards = getVisibleCards();
 
   return (
     <section className="">
@@ -64,25 +104,30 @@ const Section3: React.FC = () => {
                 {TABS_DATA.map((tab) => (
                   <div
                     key={tab.key}
-                    className={`${activeTab === tab.key ? "w-full flex flex-row items-center gap-6 flex-wrap" : "hidden"}`}
-                    // className={`${activeTab === tab.key ? "w-full flex flex-row items-center gap-6" : "hidden"}`}
+                    className={`${activeTab === tab.key ? "w-full flex flex-row items-center gap-6" : "hidden"}`}
                     role="tabpanel"
                     aria-labelledby={`${tab.key}-tab`}
                   >
-                    {tab.content.map((item, index) => (
+                    {visibleCards.map((item, index) => (
                       <CardComponent
                         key={index}
                         title={item.title}
                         description={item.description}
                         image={item.image}
                         tags={item.tags}
-                        className="flex-auto"
-                        style={{ margin: '0 1rem' }} // Add margin between cards
                       />
                     ))}
                   </div>
                 ))}
-                <GoDot />
+                <div className="flex justify-center mt-16">
+                  {Array.from({ length: totalDots }).map((_, index) => (
+                    <GoDot
+                      key={index}
+                      className={`text-3xl cursor-pointer fill-gray-400 hover:fill-custom-red transition-all duration-300 ${index === currentSlide ? 'fill-custom-red' : 'fill-gray-400'}`}
+                      onClick={() => handleDotClick(index)}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
