@@ -1,5 +1,4 @@
 "use client"
-"use client"
 import React, { useState, useEffect } from "react";
 import { TABS_DATA } from "@/constant";
 import CardComponent from "./CardComponent";
@@ -36,19 +35,8 @@ const Section3: React.FC = () => {
     const currentTab = TABS_DATA.find((tab) => tab.key === activeTab);
     if (currentTab) {
       const cardsPerView = getCardsPerView();
-      let startIndex = currentSlide * cardsPerView;
-
-      // Adjust startIndex based on screen size
-      if (windowSize >= 1024) {
-        startIndex = Math.max(0, startIndex - 2); // Show 2 preceding cards for lg screens
-      } else if (windowSize >= 768) {
-        startIndex = Math.max(0, startIndex - 1); // Show 1 preceding card for md screens
-      }
-
-      const endIndex = Math.min(startIndex + cardsPerView, currentTab.content.length);
-      console.log("Start Index:", startIndex);
-      console.log("End Index:", endIndex);
-      
+      const startIndex = currentSlide * cardsPerView;
+      const endIndex = startIndex + cardsPerView;
       return currentTab.content.slice(startIndex, endIndex);
     }
     return [];
