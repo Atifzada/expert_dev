@@ -35,7 +35,7 @@ const Section3: React.FC = () => {
     const currentTab = TABS_DATA.find((tab) => tab.key === activeTab);
     if (currentTab) {
       const cardsPerView = getCardsPerView();
-      const startIndex = currentSlide * cardsPerView;
+      const startIndex = Math.min(currentSlide, currentTab.content.length - cardsPerView);
       const endIndex = startIndex + cardsPerView;
       return currentTab.content.slice(startIndex, endIndex);
     }
@@ -46,7 +46,7 @@ const Section3: React.FC = () => {
     const currentTab = TABS_DATA.find((tab) => tab.key === activeTab);
     if (currentTab) {
       const cardsPerView = getCardsPerView();
-      return Math.ceil(currentTab.content.length / cardsPerView);
+      return Math.max(0, currentTab.content.length - cardsPerView + 1);
     }
     return 0;
   };
