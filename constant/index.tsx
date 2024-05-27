@@ -19,17 +19,318 @@ export const NAV_LINK = [
   { href: "", key: "contact", label: "Kontakt" },
 ];
 
-// CUSTOM_TABS_SECTION_3
-export const CUSTOM_TABS_SECTION_3 = [
-  { href: "", key: "weby", label: "Weby" },
-  { href: "", key: "eshopy", label: "Eshopy" },
-  { href: "", key: "seo", label: "SEO" },
-  { href: "", key: "online-marketing", label: "Online marketing" },
-  { href: "", key: "grafika", label: "Grafika" },
-  { href: "", key: "vyvoj-aplikaci", label: "Vývoj aplikací" },
+// // CUSTOM_TABS_SECTION_3
+// export const CUSTOM_TABS_SECTION_3 = [
+//   { href: "", key: "weby", label: "Weby" },
+//   { href: "", key: "eshopy", label: "Eshopy" },
+//   { href: "", key: "seo", label: "SEO" },
+//   { href: "", key: "online-marketing", label: "Online marketing" },
+//   { href: "", key: "grafika", label: "Grafika" },
+//   { href: "", key: "vyvoj-aplikaci", label: "Vývoj aplikací" },
+// ];
+
+// export const weby_items  = [
+//   {
+//     title: "Webové stránky na míru",
+//     description:
+//       "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+//     image: "/img11.jpg", // replace with your image path
+//     tags: "BUSINESS - NEWS - SEO",
+//   },
+//   {
+//     title: "Webové stránky ze šablony",
+//     description:
+//       "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+//     image: "/img12.jpg", // replace with your image path
+//     tags: "BUSINESS - MARKETING - SEO",
+//   },
+//   {
+//     title: "Mikrostránky",
+//     description:
+//       "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+//     image: "/img13.jpg", // replace with your image path
+//     tags: "MARKETING - NEWS - SEO",
+//   },
+// ];
+
+
+
+
+
+
+// index.js
+export const TABS_DATA = [
+  {
+    key: "weby",
+    label: "Weby",
+    content: [
+      {
+        title: "Webové stránky na míru",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image:"/img11.jpg",
+        tags: "BUSINESS - NEWS - SEO",
+      },
+      {
+        title: "Webové stránky ze šablony",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/img12.jpg",
+        tags: "BUSINESS - MARKETING - SEO",
+      },
+      {
+        title: "Mikrostránky",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/img13.jpg",
+        tags: "MARKETING - NEWS - SEO",
+      },
+    ],
+  },
+
+  {
+    key: "eshopy",
+    label: "eshopy",
+    content: [
+      {
+        title: "Eshop na míru",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image:"/e-shop-na-miru.jpg",
+        tags: "BUSINESS - NEWS - SEO",
+      },
+      {
+        title: "Eshop šablonové řešení",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/eshop-sablonove-reseni.jpg",
+        tags: "BUSINESS - MARKETING - SEO",
+      },
+      {
+        title: "2d a 3D konfigurator",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/23-3d-konfigurator.jpg",
+        tags: "BUSINESS - MARKETING - SEO",
+      },
+      {
+        title: "Napojení na Helios",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/pripojeni-helios.jpg",
+        tags: "BUSINESS - MARKETING - SEO",
+      },
+    ],
+  },
+
+  {
+    key: "seo",
+    label: "seo",
+    content: [
+      {
+        title: "Analyza klicovych slov",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image:"/ppc-systemy.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Audit webových stránek",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/audit-webovych-stranek.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Poradenství a konzultace",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/poradenstvi-a-konzultace-1.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Off page faktory",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/off-page-faktory.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "On page faktory",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/on-page-faktory.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Optiweb",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/optiweb.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Obsahový marketing",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/obsahovy_marketing.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+    ],
+  },
+
+  {
+    key: "online-marketing",
+    label: "online-marketing",
+    content: [
+      {
+        title: "PPC systémy",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image:"/ppc-systemy.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Zbožové srovnávače",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/zbozove-srovnavace.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Správa sociálních sítí",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/sprava-socialnich-siti.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Email marketing",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/email-marketing.jpg",
+        tags: "MARKETING - NEWS - SEO",
+      },
+      {
+        title: "Affiliate marketing",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/affiliate-marketing.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Analytika a reporting",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/analytika-a-reporting.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+    ],
+  },
+  
+  {
+    key: "vyvoj-aplikaci",
+    label: "vyvoj-aplikaci",
+    content: [
+      {
+        title: "Firemní identita",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image:"/firemni-identita.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Logo",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/logo.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Bannery",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/bannery.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Tvorba videí",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/tvorba-videi.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "3D vizualizace",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/3d-vizualizace-1.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "VR",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/vr.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+    ],
+  },
+
+  {
+    key: "grafika",
+    label: "grafika",
+    content: [
+      {
+        title: "Vývoj webových aplikací",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image:"/vyvoj-webovych-aplikaci.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Vývoj mobilních aplikací",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/vyvoj-mobilnich-aplikaci.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Outsourcing IT služeb",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/outsourcing-it-sluzeb.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Aplikace dle typu",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/aplikace-dle-typu.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+      {
+        title: "Vaše řešení na míru",
+        description:
+          "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
+        image: "/vase-reseni-na-miru-1.jpg",
+        tags: "BRANDING - NEWS - SEO",
+      },
+    ],
+  },
+  // Add data for other tabs similarly
 ];
 
-// CUSTOM_TABS_SECTION_3
+
+
+
+
+
+
+
+
+
+// CUSTOM_TABS_SECTION_7
 export const CUSTOM_TABS_SECTION_7 = [
   { href: "", key: "Frontend", label: "Frontend" },
   { href: "", key: "Backend", label: "Backend" },
