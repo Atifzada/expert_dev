@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { TABS_DATA } from "@/constant";
 import CardComponent from "./CardComponent";
 import { GoDot } from "react-icons/go";
+import { MdCircle } from "react-icons/md";
 
 const Section3: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>(TABS_DATA[0]?.key || "");
@@ -119,11 +120,15 @@ const Section3: React.FC = () => {
                     ))}
                   </div>
                 ))}
-                <div className="flex justify-center mt-16">
+                <div className="flex justify-center mt-20 gap-2">
                   {Array.from({ length: totalDots }).map((_, index) => (
-                    <GoDot
+                    <MdCircle 
                       key={index}
-                      className={`text-3xl cursor-pointer ${index === currentSlide ? 'text-custom-red' : 'text-gray-400 hover:text-custom-red transition-all duration-300'}`}
+                      className="cursor-pointer transition-all duration-300"
+                      style={{
+                        color: index === currentSlide ? '#FF0000' : '#A0AEC0',
+                        fill: index === currentSlide ? '#FF0000' : '#A0AEC0',
+                      }}
                       onClick={() => handleDotClick(index)}
                     />
                   ))}

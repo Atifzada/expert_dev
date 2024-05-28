@@ -99,7 +99,7 @@ export const TABS_DATA = [
         title: "Analyza klicovych slov",
         description:
           "Cras sed tortor maximus, pellentesque lectus ac, condimentum nisi. Nullam aliquet pharetra lacinia. Donec.",
-        image:"/ppc-systemy.jpg",
+        image:"/analyza-klicovych-slov.jpg",
         tags: "BRANDING - NEWS - SEO",
       },
 
