@@ -52,11 +52,11 @@ function Reference() {
     }, []);
 
     return (
-        <section className="my-16 py-16">
-            <div className="mx-20 flex flex-col gap-2 items-center">
-                <div className="flex items-center">
+        <section className="my-16 py-24">
+            <div className="flex flex-col gap-2 items-center justify-center px-4">
+                <div className="flex w-full items-center justify-center gap-2">
                     <LuTriangleRight className="text-pink" style={{ fill: "#FF0066" }} />
-                    <span className="text-16 text-pink font-QuickSand font-bold ml-2">
+                    <span className="text-16 text-pink font-QuickSand font-bold">
                         VYBRANÉ PROJEKTY
                     </span>
                 </div>
@@ -65,12 +65,12 @@ function Reference() {
                         Reference
                     </h2>
                 </div>
-                <div className="w-1/2 mx-auto text-center">
+                <div className="w-full md:w-1/2 mx-auto text-center">
                     <p className="text-center text-black leading-5 font-QuickSand font-medium">
                         Pomohli jsme firmám různých oborů a všech velikostí dosáhnout jejich marketingových cílů a posunout jejich byznys na další úroveň. Prohlédněte si některé z našich úspěšných projektů spokojených klientů.
                     </p>
                 </div>
-                <div className="">
+                {/* <div className="">
                     <div className="tabs">
                         <ul
                             className="mb-5 flex list-none flex-row justify-center flex-wrap border-b-0 ps-0 py-8"
@@ -129,7 +129,7 @@ function Reference() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );
