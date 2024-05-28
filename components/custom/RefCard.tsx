@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { FaPlus } from "react-icons/fa";
 
 interface RefCardProps {
@@ -41,20 +41,25 @@ const RefCard: React.FC<RefCardProps> = ({ bgImage, name, description }) => {
                 <div
                     className="absolute -right-7 bottom-9 w-[10%] h-[10%] rounded-[1rem] p-8 z-15 bg-gray-700 flex-none items-center justify-center"
                     onMouseEnter={(e) => {
-                        e.currentTarget.querySelector('.plus-icon').classList.remove('rotateRev');
-                        e.currentTarget.querySelector('.plus-icon').classList.add('rotatePlus');
+                        const plusIcon = e.currentTarget.querySelector('.plus-icon');
+                        if (plusIcon) {
+                            plusIcon.classList.remove('rotateRev');
+                            plusIcon.classList.add('rotatePlus');
+                        }
                     }}
                     onMouseLeave={(e) => {
-                        e.currentTarget.querySelector('.plus-icon').classList.remove('rotatePlus');
-                        e.currentTarget.querySelector('.plus-icon').classList.add('rotateRev');
+                        const plusIcon = e.currentTarget.querySelector('.plus-icon');
+                        if (plusIcon) {
+                            plusIcon.classList.remove('rotatePlus');
+                            plusIcon.classList.add('rotateRev');
+                        }
                     }}
                 >
                     <FaPlus className='text-white text-2xl absolute left-5 top-5 plus-icon' />
                 </div>
-
             </div>
-        </div >
+        </div>
     );
 }
 
-export default RefCard
+export default RefCard;

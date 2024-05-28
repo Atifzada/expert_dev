@@ -12,6 +12,24 @@
 @tailwind components;
 @tailwind utilities; */
 
+.font-Balooc {
+  font-family: 'Baloo Chettan 2', sans-serif;
+}
+.font-Baloo {
+  font-family: 'Baloo Bhaina 2', sans-serif;
+}
+
+.w-half-px-xs {
+  width: 0.5px;
+}
+
+@media (min-width: 640px) {
+  .sm\:w-half-px-xs {
+    width: 1px;
+  }
+}
+
+
 .placeholder-b-black::placeholder {
   color: #000000; /* Use the desired text color */
 }
@@ -170,3 +188,4 @@
   font-family: 'QuickSand', sans-serif;
   font-weight: bold;
 }
+
