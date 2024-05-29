@@ -63,7 +63,13 @@ const config: Config = {
         eimg1: "url('/img4.jpg')",
         eimg2: "url('/img4.jpg')",
         eimg3: "url('/img4.jpg')",
+
         'custom-gradient': 'linear-gradient(180deg, rgba(255,0,102,0.19) 0%, rgba(255,255,255,1) 21%)',
+      },
+      screens: {
+        'xl': '1400px',
+        'large': '1200px',
+        'fourK': '2000px'
       }
     }
   },

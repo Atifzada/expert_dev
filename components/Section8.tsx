@@ -12,13 +12,13 @@ const Section8 = () => {
   }, []);
 
   return (
-    <section className="relative h-60 mx-40 mt-8 mb-20 overflow-hidden rounded-xl">
-      <div className="absolute top-0 left-0 w-full h-full flex transition-transform duration-1000" style={{ transform: `translateX(-${currentImage * 100}%)` }}>
-        <div className="w-full flex-shrink-0">
-          <img src="/img1.PNG" alt="Image 1" className="w-full h-full object-cover" />
+    <section className="relative h-20 md:h-60 mx-2 sm:mx-6 md:mx-40 overflow-hidden rounded-xl">
+      <div className="flex items-center transition-transform duration-1000" style={{ transform: `translateX(-${currentImage * 100}%)` }}>
+        <div className="w-full flex-shrink-0 items-center ">
+          <img src="/img1.PNG" alt="Image 1" className="object-cover" />
         </div>
         <div className="w-full flex-shrink-0">
-          <img src="/img2.PNG" alt="Image 2" className="w-full h-full object-cover" />
+          <img src="/img2.PNG" alt="Image 2" className="object-cover" />
         </div>
       </div>
     </section>
