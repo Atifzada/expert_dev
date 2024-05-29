@@ -10,6 +10,7 @@ import Section8 from "@/components/Section8";
 import Section10 from "@/components/Section10";
 import Section11 from "@/components/Section11";
 import Section12 from "@/components/Section12";
+import Section13 from "@/components/Section13";
 import Reference from "@/components/Reference";
 
 const page1 = () => {
@@ -28,6 +29,7 @@ const page1 = () => {
       <Section10 />
       <Section11 />
       <Section12 />
+      <Section13 />
 
     </>
   )
