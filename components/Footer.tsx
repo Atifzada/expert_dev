@@ -174,7 +174,7 @@ const Footer = () => {
       </div>
 
       <div className="h-20 md:h-30 bg-b-black flex items-center justify-center font-Baloo font-normal text-12 md:text-14">
-        <div className="text-grey font-medium flex items-center justify-around border-2 border-custom-red w-full sm:w-[90%] md:w-[60%] lg:w-[40%]">
+        <div className="text-grey font-medium flex items-center justify-around w-full sm:w-[90%] md:w-[60%] lg:w-[40%]">
           <span className="">© 2024</span>
           <span className="">|</span>
           <span className="">Expert Dev, s.r.o.</span>
