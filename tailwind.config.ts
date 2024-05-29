@@ -17,6 +17,8 @@ const config: Config = {
       },
       colors: {
         'custom-red': '#FF0066',
+        'custom-gray': '#EDEDED',
+        'custom-gr': '#27272773',
         'custom-white': '#FFFFFF',
         'black': '#272727',
         'custom-black': '#3B3B3B',
