@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
+import Image from 'next/image';
 import { FaAtom, FaPlayCircle, FaStar } from "react-icons/fa";
 import Swiper from "swiper";
 import "swiper/css";
@@ -63,89 +64,43 @@ const Section2 = () => {
     <section className="bg-hero bg-auto bg-left bg-no-repeat pt-20">
       <div className="relative">
         <div className="inset-0 flex flex-col md:flex-row items-center justify-center z-30">
-          <div className="w-[70%] flex flex-col items-center lg:flex-row gap-2 bg-black md:rounded-full lg:rounded-full lg:ml-32 p-6 lg:p-10 border-2 border-custom-red">
-            <div className="w-full flex items-center justify-center lg:w-1/4">
-              <div className="absolute pt-4 pl-12 hidden lg:block">
-                <FaStar className="text-xl text-white" />
-              </div>
-              <div className="absolute hidden lg:block mt-8 pl-60">
-                <FaAtom className="text-xl text-white" />
-              </div>
-              <div className="py-12">
-                <div className="flex flex-col justify-center w-auto">
-                  <h2 className="text-20 md:text-32 font-extrabold text-white font-QuickSand block">
-                    Expert Dev, s.r.o
-                  </h2>
-                  <span className="text-12 md:text-16 font-light text-white font-QuickSand">
-                    vaše digitální agentura
-                  </span>
-                </div>
-
-                <div className="absolute pl-24 hidden lg:block mt-6">
-                  <FaAtom className="text-xl text-white" />
-                </div>
-              </div>
+          {/* <div className="w-[70%] flex flex-col items-center lg:flex-row gap-2 bg-black md:rounded-full lg:rounded-full lg:ml-32 p-6 lg:p-10 border-2 border-custom-red"> */}
+          <div className="ml-28 w-[70%] p-4  grid grid-cols-4 gap-2 bg-black rounded-full">
+            {/* class_1 */}
+            {/* <div className="01 col-span-2 text-white pl-32"> */}
+            <div className="01 flex flex-col justify-center items-center text-white">
+              <h2 className="text-22 font-QuickSand font-extrabold">Expert Dev, s.r.o</h2>
+              <p className="text-16 font-QuickSand font-light">vaše digitální agentura</p>
             </div>
 
-            <div className="overlay w-full md:w-1/4 relative border-2 border-custom-red">
-              <div
-                className="relative rounded-full bg-cover bg-center h-full w-full"
-                style={{
-                  borderBottomRightRadius: "0",
-                  borderTopRightRadius: "0",
-                  backgroundImage: 'url(https://vstupni.expert-dev.cz/wp-content/uploads/2024/01/tvorba-webovych-stranek-pro-hotely-300x169.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              >
-
-                <div className="elementor-element elementor-element-9f1e0bf elementor-view-default elementor-widget elementor-widget-icon absolute inset-0 flex items-center justify-center">
-                  <div className="elementor-widget-container">
-                    <div className="elementor-icon-wrapper">
-                      <div className="elementor-icon">
-                        <FaPlayCircle className="text-4xl text-white" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* class_2 */}
+            <div className="02" >
+              <img src="/section2Overlay.PNG" alt="bg image" 
+              className="rounded-full" 
+              style={{borderTopRightRadius:0,borderBottomRightRadius:0}}
+              />
             </div>
-            <div className="flex items-center justify-center gap-2">
-              <div className="w-1/4 md:max-md:rounded-tl-full md:max-md:rounded-bl-full flex flex-col gap-2 items-center justify-center bg-white p-4">
-                <img
-                  src="https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/google_logo.png"
-                  alt="Google Logo"
-                  className="w-24"
-                />
-                <div className="text-2xl font-medium">
-                  4.9<span className="font-medium">/5</span>
-                </div>
-                <img
-                  src="https://vstupni.expert-dev.cz/wp-content/uploads/2024/04/rating-1024x232.png"
-                  alt="Rating"
-                  className="w-[80%] "
-                />
-              </div>
-              <div className="w-1/4 bg-white md:rounded-tr-full md:rounded-br-full p-4">
-                <div className="flex flex-col items-start justify-center pl-2">
-                  <div>
-                    <h2 className="text-[0.5rem] lg:text-[0.7rem] font-bold font-QuickSand">
-                      Programováno
-                    </h2>
-                    <div className="w-[80%] border-t border-gray-500 my-2" />
-                  </div>
-                  <div className="text-22 font-bold font-QuickSand">
-                    5,000 h
-                  </div>
-                  <div className="psani-text h-10">
-                    <p className="typewrite text-14 md:text-16 text-black font-normal font-QuickSnad">
+
+            {/* class_3 */}
+            <div className="03 bg-white flex flex-col justify-center items-center px-2">
+            <div><img src="/google_logo.PNG" alt="" /></div>
+            <div><p className="text-28 text-black font-QuickSand font-bold">4.9<span className="font-medium">/5</span></p></div>
+            <div><img src="/hodnoceni-5.PNG" alt="" /></div>
+            </div>
+
+            {/* Class_4 */}
+            <div className="04 bg-white flex flex-col justify-center items-center gap-4 rounded-full"style={{borderTopLeftRadius:0,borderBottomLeftRadius:0}}>
+              <div><p className="text-14 font-QuickSand font-bold">Programováno</p></div>
+              <div><p className="text-28 text-black font-QuickSand font-bold">5,000 h</p></div>
+              <div className="psani-text h-10">
+                    <p className="typewrite text-16 md:text-16 text-black font-medium font-QuickSnad">
                       <Typewriter text="Hello World" speed={150} />
                     </p>
                   </div>
-                </div>
-              </div>
             </div>
+
           </div>
+          {/* </div> */}
           {/* Right animation  */}
           <div className="w-full my-4 md:w-[20%] flex flex-col md:flex-row items-center justify-center">
             <div className="elementor-image w-full bg-custom-red p-4">
