@@ -77,7 +77,7 @@ const Section2 = () => {
             <div className="02 md:max-lg:col-span-4" >
   <div className="flex w-full">
     <img 
-      src="/section2Overlay.PNG" 
+      src="/section2Overlay.png" 
       alt="bg image" 
       className="w-full md:max-lg:h-[3rem] lg:rounded-full lg:rounded-tr-none lg:rounded-br-none overflow-hidden" 
     />
@@ -86,9 +86,9 @@ const Section2 = () => {
 
             {/* class_3 */}
             <div className="03 bg-white flex flex-col justify-center items-center px-2 md:max-lg:col-span-2 md:max-lg:rounded-bl-[2.5rem] ">
-            <div className="w-[75%]"><img src="/google_logo.PNG" alt=""/></div>
+            <div className="w-[75%]"><img src="/google_logo.png" alt=""/></div>
             <div><p className="text-28 text-black font-QuickSand font-bold">4.9<span className="font-medium">/5</span></p></div>
-            <div className="w-[75%]"><img src="/hodnoceni-5.PNG" alt="" /></div>
+            <div className="w-[75%]"><img src="/hodnoceni-5.png" alt="" /></div>
             </div>
 
             {/* Class_4 */}
