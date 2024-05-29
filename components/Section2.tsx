@@ -65,7 +65,7 @@ const Section2 = () => {
       <div className="relative">
         <div className="inset-0 flex flex-col md:flex-row items-center justify-center z-30">
           {/* <div className="w-[70%] flex flex-col items-center lg:flex-row gap-2 bg-black md:rounded-full lg:rounded-full lg:ml-32 p-6 lg:p-10 border-2 border-custom-red"> */}
-          <div className="ml-28 w-[70%] p-4 grid grid-rows-4-col-1 md:grid-cols-4  gap-2 bg-black rounded-full md:max-lg:rounded-[4rem]">
+          <div className="md:ml-28 w-[70%] p-4 grid grid-rows-4-col-1 md:grid-cols-4  gap-2 bg-black rounded-full md:max-lg:rounded-[4rem]">
             {/* class_1 */}
             {/* <div className="01 col-span-2 text-white pl-32"> */}
             <div className="01 pt-4 flex flex-col justify-center items-center text-white md:max-lg:col-span-4">
