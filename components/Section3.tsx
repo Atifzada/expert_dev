@@ -92,14 +92,14 @@ const Section3: React.FC = () => {
                       aria-controls={tab.key}
                       aria-selected={activeTab === tab.key ? "true" : "false"}
                     >
-                      <span className="border-b-2 border-transparent hover:border-custom-red transition-all duration-500 ease-in">
+                      <span className="border-b-2 border-transparent hover:border-custom-red transition-all duration-500 ease-in capitalize">
                         {tab.label}
                       </span>
                     </button>
                   </li>
                 ))}
               </ul>
-              <div className="">
+              <div className="mt-12 ">
                 {TABS_DATA.map((tab) => (
                   <div
                     key={tab.key}
