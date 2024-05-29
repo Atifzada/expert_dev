@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="bg-white">
         <Navbar />
         <main className="relative overflow-hidden border-4">{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
