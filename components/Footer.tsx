@@ -173,18 +173,17 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="h-20 bg-b-black flex items-center justify-center font-Baloo font-normal text-14">
-  <p className="text-grey font-normal flex items-center">
-    <span className="font-medium text-14">© 2024</span>
-    <span className="inline-block h-5 w-px sm:w-half-px-xs bg-grey mx-1/2"></span>
-    <span className="ml-1 font-medium text-14">Expert Dev, s.r.o.</span>
-    <span className="inline-block h-5 w-px sm:w-half-px-xs bg-grey mx-1/2"></span>
-    <span className="font-medium text-14">Všechna práva vyhrazena</span>
-    <span className="inline-block h-5 w-px sm:w-half-px-xs bg-grey mx-1/2"></span>
-    <span className="font-medium font-Baloo text-14">GDPR</span>
-  </p>
-</div>
-
+      <div className="h-20 md:h-30 bg-b-black flex items-center justify-center font-Baloo font-normal text-12 md:text-14">
+        <div className="text-grey font-medium flex items-center justify-around w-full sm:w-[90%] md:w-[60%] lg:w-[40%]">
+          <span className="">© 2024</span>
+          <span className="">|</span>
+          <span className="">Expert Dev, s.r.o.</span>
+          <span className="">|</span>
+          <span className="">Všechna práva vyhrazena</span>
+          <span className="">|</span>
+          <span className="">GDPR</span>
+        </div>
+      </div>
     </footer>
   );
 };

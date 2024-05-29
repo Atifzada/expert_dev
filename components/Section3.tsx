@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { TABS_DATA } from "@/constant";
 import CardComponent from "./CardComponent";
-import { GoDot } from "react-icons/go";
+import { LuTriangleRight } from "react-icons/lu";
 import { MdCircle } from "react-icons/md";
 
 const Section3: React.FC = () => {
@@ -59,24 +59,22 @@ const Section3: React.FC = () => {
     <section className="">
       <div className="flex flex-col gap-6 items-center px-20 pt-44 h-auto">
         <div className="flex items-center">
-          <span>Icon Placeholder</span>
+          <LuTriangleRight className="text-pink" style={{ fill: "#FF0066", height: '13px', width: '13px' }} />
           <span className="text-16 text-pink font-QuickSand font-bold ml-2">
             NAŠE SLUŽBY
           </span>
         </div>
         <div>
-          <h2 className="text-40 font-extrabold font-Balooc text-black">
+          <h2 className="mx-auto text-center text-40 font-extrabold font-Balooc text-black">
             Poskytujeme komplexní digitální služby
           </h2>
         </div>
-        <div className="w-3/4 mx-auto text-center">
-          <p className="text-16 font-medium font-QuickSand text-black">
-            Snažíme se pomáhat firmám v jejich růstu z hlediska zvýšení prodejů,
-            získání potenciálních zákazníků a značek. Neustále pracujeme na tom,
-            abychom měli přehled o nejnovějších trendech a osvědčených
-            postupech, které lze aplikovat v projektech pro naše klienty.
-          </p>
-        </div>
+        <p className="text-16 font-medium font-QuickSand text-black text-center">
+          Snažíme se pomáhat firmám v jejich růstu z hlediska zvýšení prodejů,
+          získání potenciálních zákazníků a značek. Neustále pracujeme na tom,
+          abychom měli přehled o nejnovějších trendech a osvědčených
+          postupech, které lze aplikovat v projektech pro naše klienty.
+        </p>
         <div>
           <div className="py-8 w-full flex flex-col justify-center items-center gap-4">
             <div className="tabs">
@@ -94,14 +92,14 @@ const Section3: React.FC = () => {
                       aria-controls={tab.key}
                       aria-selected={activeTab === tab.key ? "true" : "false"}
                     >
-                      <span className="border-b-2 border-transparent hover:border-custom-red transition-all duration-500 ease-in">
+                      <span className="border-b-2 border-transparent hover:border-custom-red transition-all duration-500 ease-in capitalize">
                         {tab.label}
                       </span>
                     </button>
                   </li>
                 ))}
               </ul>
-              <div className="">
+              <div className="mt-12 ">
                 {TABS_DATA.map((tab) => (
                   <div
                     key={tab.key}
@@ -122,7 +120,7 @@ const Section3: React.FC = () => {
                 ))}
                 <div className="flex justify-center mt-20 gap-2">
                   {Array.from({ length: totalDots }).map((_, index) => (
-                    <MdCircle 
+                    <MdCircle
                       key={index}
                       className="cursor-pointer transition-all duration-300"
                       style={{
