@@ -25,37 +25,37 @@ const Slide = styled.div`
 
 const slides = [
 
-{
+  {
     img: "https://vstupni.expert-dev.cz/wp-content/uploads/elementor/thumbs/spokojeni-klienti-qmjze6b01lb0jysuta0sr3hmvbqkuziiw8w93iyex0.png",
     title: "S konečným výsledkem webu jsme velmi spokojeni",
     text: "Nejdůležitejší pro naši kancelář je rychlá a pružná reakce na drobné změny na hotových webech. Vždy je nabízeno řešení, optimalizace pro různá zařízení a postupy, které nám vyhovují. Expert dev a pan Nevařil neprosazují tvrdohlavě svou a mají věcný a profesionální přístup. Kolegové, kteří obsluhují služby webu chválí jejich provedení. Mohu jen doporučit",
     rating: "Hodnocení 5/5",
     stars: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/05/hodnoceni-5.png"
-},
+  },
 
-{
+  {
     img: "https://vstupni.expert-dev.cz/wp-content/uploads/elementor/thumbs/spokojeni-klienti-qmjze6b01lb0jysuta0sr3hmvbqkuziiw8w93iyex0.png",
     title: "S konečným výsledkem webu jsme velmi spokojeni",
     text: "Nejdůležitejší pro naši kancelář je rychlá a pružná reakce na drobné změny na hotových webech. Vždy je nabízeno řešení, optimalizace pro různá zařízení a postupy, které nám vyhovují. Expert dev a pan Nevařil neprosazují tvrdohlavě svou a mají věcný a profesionální přístup. Kolegové, kteří obsluhují služby webu chválí jejich provedení. Mohu jen doporučit",
     rating: "Hodnocení 5/5",
     stars: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/05/hodnoceni-5.png"
-},
+  },
 
-{
+  {
     img: "https://vstupni.expert-dev.cz/wp-content/uploads/elementor/thumbs/spokojeni-klienti-qmjze6b01lb0jysuta0sr3hmvbqkuziiw8w93iyex0.png",
     title: "S konečným výsledkem webu jsme velmi spokojeni",
     text: "Nejdůležitejší pro naši kancelář je rychlá a pružná reakce na drobné změny na hotových webech. Vždy je nabízeno řešení, optimalizace pro různá zařízení a postupy, které nám vyhovují. Expert dev a pan Nevařil neprosazují tvrdohlavě svou a mají věcný a profesionální přístup. Kolegové, kteří obsluhují služby webu chválí jejich provedení. Mohu jen doporučit",
     rating: "Hodnocení 5/5",
     stars: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/05/hodnoceni-5.png"
-},
+  },
 
-{
+  {
     img: "https://vstupni.expert-dev.cz/wp-content/uploads/elementor/thumbs/spokojeni-klienti-qmjze6b01lb0jysuta0sr3hmvbqkuziiw8w93iyex0.png",
     title: "S konečným výsledkem webu jsme velmi spokojeni",
     text: "Nejdůležitejší pro naši kancelář je rychlá a pružná reakce na drobné změny na hotových webech. Vždy je nabízeno řešení, optimalizace pro různá zařízení a postupy, které nám vyhovují. Expert dev a pan Nevařil neprosazují tvrdohlavě svou a mají věcný a profesionální přístup. Kolegové, kteří obsluhují služby webu chválí jejich provedení. Mohu jen doporučit",
     rating: "Hodnocení 5/5",
     stars: "https://vstupni.expert-dev.cz/wp-content/uploads/2024/05/hodnoceni-5.png"
-},
+  },
   // ... (other slides)
 ];
 
@@ -78,20 +78,20 @@ const Section10 = () => {
   };
 
   return (
-    <section className='mb-20'>
-      <div className='flex flex-col gap-2 items-center'>
-        <div className="flex items-center">
+    <section className=''>
+      <div className='flex flex-col gap-2 items-center justify-center px-6'>
+        <div className="flex items-center justify-center gap-2">
           <LuTriangleRight className="text-pink" style={{ fill: "#FF0066" }} />
-          <span className="text-16 text-pink font-QuickSand font-bold ml-2">
+          <span className="text-16 text-pink font-QuickSand font-bold">
             HODNOCENÍ
           </span>
         </div>
         <div>
-          <h2 className="text-40 font-extrabold font-Balooc text-black">
+          <h2 className="text-40 font-extrabold font-Balooc text-black text-center">
             Co o nás říkají zákazníci?
           </h2>
         </div>
-        <div className="w-1/2 mx-auto text-center">
+        <div className="w-full md:w-1/2 mx-auto text-center">
           <p className="text-16 font-QuickSand font-medium text-black">
             Expert Dev poskytuje profesionální služby a má podporu mnoha spokojených zákazníků. Podívejte se, co někteří z nich říkají o našich službách.
           </p>

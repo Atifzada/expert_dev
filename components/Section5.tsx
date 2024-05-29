@@ -31,31 +31,29 @@ const Section5: React.FC = () => {
   }, []);
 
   return (
-    <section className="m-28">
-      <div className="container mx-auto p-4">
-        <div className="flex flex-wrap">
-          {sections.map((section, index) => (
-            <div key={index} className="w-full md:w-1/4 flex items-start mb-8">
-              <div className="flex-1 text-center">
-                <div className="text-76 font-extrabold font-QuickSand text-custom-red">
-                  <span data-duration="2000" data-to-value={section.value} data-from-value="0">
-                    {section.value}{section.value === 300 && '+'}
-                  </span>
-                </div>
-                <div className="text-24 text-black font-semibold font-QuickSand">{section.heading}</div>
+    <section className="w-full py-16 lg:px-20 xl:px-28">
+      <div className="flex justify-center flex-wrap p-4">
+        {sections.map((section, index) => (
+          <div key={index} className="flex justify-center gap-4 p-4">
+            <div className="flex flex-col text-center">
+              <div className="text-[4.2rem] lg:text-[4.8rem] xl:text-[5.3rem] font-extrabold font-QuickSand text-custom-red">
+                <span data-duration="2000" data-to-value={section.value} data-from-value="0">
+                  {section.value}{section.value === 300 && '+'}
+                </span>
               </div>
-              {index < 3 && (
-                <div className="flex justify-start ml-4">
-                  <div className="p-2 rounded-lg">
-                    <div className="dotted-line">
-                      <div className="w-2 rounded-full bg-custom-red circle"></div>
-                    </div>
+              <div className="text-18 lg:text-24 xl:text-28 text-black font-semibold font-QuickSand">{section.heading}</div>
+            </div>
+            {index < 3 && (
+              <div className="hidden md:flex md:justify-start">
+                <div className="p-2 rounded-lg">
+                  <div className="dotted-line">
+                    <div className="w-2 rounded-full bg-custom-red circle"></div>
                   </div>
                 </div>
-              )}
-            </div>
-          ))}
-        </div>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </section>
   );

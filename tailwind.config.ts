@@ -54,6 +54,11 @@ const config: Config = {
         eimg1: "url('/img4.jpg')",
         eimg2: "url('/img4.jpg')",
         eimg3: "url('/img4.jpg')",
+      },
+      screens: {
+        'xl': '1400px',
+        'large': '1200px',
+        'fourK': '2000px'
       }
     }
   },
