@@ -2,11 +2,16 @@
 import React, { useEffect } from "react";
 import Image from 'next/image';
 import { FaAtom, FaPlayCircle, FaStar } from "react-icons/fa";
-import Swiper from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/autoplay"; // Import autoplay styles
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 interface TypewriterProps {
   text: string;
@@ -49,17 +54,6 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 200 }) => {
 };
 
 const Section2 = () => {
-  useEffect(() => {
-    // Initialize Swiper
-    new Swiper(".elementor-image-carousel-wrapper", {
-      loop: true,
-      autoplay: {
-        delay: 2000,
-        reverseDirection: true, // To run the swiper from right to left
-      },
-    });
-  }, []);
-
   return (
     <section className="bg-hero bg-auto bg-left bg-no-repeat pt-20">
       <div className="relative">
@@ -75,20 +69,20 @@ const Section2 = () => {
 
             {/* class_2 */}
             <div className="02 md:max-lg:col-span-4" >
-  <div className="flex w-full">
-    <img 
-      src="/section2Overlay.png" 
-      alt="bg image" 
-      className="w-full md:max-lg:h-[3rem] lg:rounded-full lg:rounded-tr-none lg:rounded-br-none overflow-hidden" 
-    />
-  </div>
+              <div className="flex w-full">
+                <img
+                  src="/section2Overlay.png"
+                  alt="bg image"
+                  className="w-full md:max-lg:h-[3rem] lg:rounded-full lg:rounded-tr-none lg:rounded-br-none overflow-hidden"
+                />
+              </div>
             </div>
 
             {/* class_3 */}
             <div className="03 bg-white flex flex-col justify-center items-center px-2 md:max-lg:col-span-2 md:max-lg:rounded-bl-[2.5rem] ">
-            <div className="w-[75%]"><img src="/google_logo.png" alt=""/></div>
-            <div><p className="text-28 text-black font-QuickSand font-bold">4.9<span className="font-medium">/5</span></p></div>
-            <div className="w-[75%]"><img src="/hodnoceni-5.png" alt="" /></div>
+              <div className="w-[75%]"><img src="/google_logo.png" alt="" /></div>
+              <div><p className="text-28 text-black font-QuickSand font-bold">4.9<span className="font-medium">/5</span></p></div>
+              <div className="w-[75%]"><img src="/hodnoceni-5.png" alt="" /></div>
             </div>
 
             {/* Class_4 */}
@@ -96,10 +90,10 @@ const Section2 = () => {
               <div><p className="text-14 font-QuickSand font-bold">Programováno</p></div>
               <div><p className="text-28 text-black font-QuickSand font-bold">5,000 h</p></div>
               <div className="psani-text h-10">
-                    <p className="typewrite text-16 md:text-16 text-black font-medium font-QuickSnad">
-                      <Typewriter text="Hello World" speed={150} />
-                    </p>
-                  </div>
+                <p className="typewrite text-16 md:text-16 text-black font-medium font-QuickSnad">
+                  <Typewriter text="Hello World" speed={150} />
+                </p>
+              </div>
             </div>
 
           </div>
@@ -108,10 +102,46 @@ const Section2 = () => {
           <div className="w-full my-4 md:w-[20%] flex flex-col md:flex-row items-center justify-center">
             <div className="elementor-image w-full bg-custom-red p-4">
               {/* Swiper container */}
-              <div className="elementor-image-carousel-wrapper swiper-container">
-                {/* Swiper wrapper */}
+              <Swiper
+                spaceBetween={30}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: false,
+                }}
+                navigation={false}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+              >
+                <SwiperSlide>
+                  <img
+                    src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/google.png"
+                    alt="google"
+                    title="google"
+                    className="w-full h-auto text-white filter brightness-0 invert"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/facebook.png"
+                    alt="facebook"
+                    title="facebook"
+                    className="w-full h-auto text-white filter brightness-0 invert"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/sklik.png"
+                    alt="sklik"
+                    title="sklik"
+                    className="w-full h-auto text-white filter brightness-0 invert"
+                  />
+                </SwiperSlide>
+              </Swiper>
+              {/* <div className="elementor-image-carousel-wrapper swiper-container">
+
                 <div className="swiper-wrapper">
-                  {/* Individual slides */}
+
                   <div className="swiper-slide">
                     <img
                       src="https://vstupni.expert-dev.cz/wp-content/uploads/2021/09/google.png"
@@ -138,7 +168,7 @@ const Section2 = () => {
                   </div>
                 </div>
                 <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
