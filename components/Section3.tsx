@@ -57,7 +57,7 @@ const Section3: React.FC = () => {
 
   return (
     <section className="">
-      <div className="flex flex-col gap-6 items-center px-4 lg:px-20 pt-44 h-auto">
+      <div className="flex flex-col gap-4 items-center px-4 lg:px-20 pt-44 h-auto">
         <div className="flex items-center">
           <LuTriangleRight className="text-pink" style={{ fill: "#FF0066", height: '13px', width: '13px' }} />
           <span className="text-16 text-pink font-QuickSand font-bold pl-3">
@@ -79,14 +79,14 @@ const Section3: React.FC = () => {
           <div className="py-4 w-full flex flex-col justify-center items-center">
             <div className="tabs">
               <ul
-                className="mb-5 flex list-none flex-row flex-wrap border-b-0 ps-0 justify-center items-center"
+                className="flex list-none flex-row flex-wrap border-b-0 ps-0 justify-center items-center"
                 role="tablist"
                 data-twe-nav-ref
               >
                 {TABS_DATA.map((tab) => (
                   <li key={tab.key} role="presentation">
                     <button
-                      className={`px-7 text-20 md:text-24 leading-[3rem] font-QuickSand text-bb font-bold inline-block transition-all duration-300 ease-in-out ${activeTab === tab.key ? 'text-custom-red text-26 md:text-32' : 'text-bb'}`}
+                      className={`px-7 text-20 md:text-24 leading-[3rem] font-QuickSand text-bb font-bold inline-block transition-all duration-300 ease-in-out ${activeTab === tab.key ? 'text-26 md:text-32' : 'text-bb'}`}
                       onClick={() => handleTabClick(tab.key)}
                       role="tab"
                       aria-controls={tab.key}
