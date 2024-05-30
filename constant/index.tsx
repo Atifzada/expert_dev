@@ -85,8 +85,8 @@ export const TABS_DATA = [
   },
 
   {
-    key: "seo",
-    label: "seo",
+    key: "SEO",
+    label: "SEO",
     content: [
       {
         title: "Audit webových stránek",

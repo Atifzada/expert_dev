@@ -57,26 +57,26 @@ const Section3: React.FC = () => {
 
   return (
     <section className="">
-      <div className="flex flex-col gap-6 items-center px-20 pt-44 h-auto">
+      <div className="flex flex-col gap-6 items-center px-4 lg:px-20 pt-44 h-auto">
         <div className="flex items-center">
           <LuTriangleRight className="text-pink" style={{ fill: "#FF0066", height: '13px', width: '13px' }} />
-          <span className="text-16 text-pink font-QuickSand font-bold ml-2">
+          <span className="text-16 text-pink font-QuickSand font-bold pl-3">
             NAŠE SLUŽBY
           </span>
         </div>
         <div>
-          <h2 className="mx-auto text-center text-40 font-extrabold font-Balooc text-black">
+          <h2 className="mx-auto text-center text-28 md:text-40 font-extrabold font-Balooc leading-10 text-black">
             Poskytujeme komplexní digitální služby
           </h2>
         </div>
-        <p className="text-16 font-medium font-QuickSand text-black text-center">
+        <p className="text-14 font-medium lg:w-[53%] lg:text-16 leading-[1.125rem] font-QuickSand text-black text-center">
           Snažíme se pomáhat firmám v jejich růstu z hlediska zvýšení prodejů,
           získání potenciálních zákazníků a značek. Neustále pracujeme na tom,
           abychom měli přehled o nejnovějších trendech a osvědčených
           postupech, které lze aplikovat v projektech pro naše klienty.
         </p>
         <div>
-          <div className="py-8 w-full flex flex-col justify-center items-center gap-4">
+          <div className="py-4 w-full flex flex-col justify-center items-center">
             <div className="tabs">
               <ul
                 className="mb-5 flex list-none flex-row flex-wrap border-b-0 ps-0 justify-center items-center"
@@ -86,7 +86,7 @@ const Section3: React.FC = () => {
                 {TABS_DATA.map((tab) => (
                   <li key={tab.key} role="presentation">
                     <button
-                      className={`px-7 text-24 font-QuickSand text-bb font-bold inline-block transition-all duration-300 ease-in-out ${activeTab === tab.key ? 'text-custom-red' : 'text-black'}`}
+                      className={`px-7 text-20 md:text-24 leading-[3rem] font-QuickSand text-bb font-bold inline-block transition-all duration-300 ease-in-out ${activeTab === tab.key ? 'text-custom-red text-26 md:text-32' : 'text-bb'}`}
                       onClick={() => handleTabClick(tab.key)}
                       role="tab"
                       aria-controls={tab.key}

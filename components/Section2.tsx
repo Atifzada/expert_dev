@@ -61,34 +61,32 @@ const Section2 = () => {
   }, []);
 
   return (
-    <section className="bg-hero bg-auto bg-left bg-no-repeat pt-20">
+    <section className="bg-hero bg-auto bg-left bg-no-repeat">
       <div className="relative">
         <div className="inset-0 flex flex-col md:flex-row items-center justify-center z-30">
-          {/* <div className="w-[70%] flex flex-col items-center lg:flex-row gap-2 bg-black md:rounded-full lg:rounded-full lg:ml-32 p-6 lg:p-10 border-2 border-custom-red"> */}
-          <div className="md:ml-28 w-[70%] p-4 grid grid-rows-4-col-1 md:grid-cols-4  gap-2 bg-black rounded-full md:max-lg:rounded-[4rem]">
+          <div className="md:ml-28 w-[70%] p-4 grid grid-rows-4-col-1 md:grid-cols-4 lg:grid-cols-5 gap-6 bg-black rounded-full md:max-lg:rounded-[4rem]">
             {/* class_1 */}
-            {/* <div className="01 col-span-2 text-white pl-32"> */}
-            <div className="01 pt-4 flex flex-col justify-center items-center text-white md:max-lg:col-span-4">
-              <h2 className="text-22 font-QuickSand font-extrabold">Expert Dev, s.r.o</h2>
+            <div className="01 lg:col-span-2 pt-4 flex flex-col justify-center items-center text-white md:max-lg:col-span-4">
+              <h2 className="text-22 leading-6 font-QuickSand font-extrabold">Expert Dev, s.r.o</h2>
               <p className="text-16 font-QuickSand font-light">vaše digitální agentura</p>
             </div>
 
             {/* class_2 */}
-            <div className="02 md:max-lg:col-span-4" >
-  <div className="flex w-full">
-    <img 
-      src="/section2Overlay.png" 
-      alt="bg image" 
-      className="w-full md:max-lg:h-[3rem] lg:rounded-full lg:rounded-tr-none lg:rounded-br-none overflow-hidden" 
-    />
-  </div>
+            <div className="02 md:max-lg:col-span-4">
+              <div className="flex w-full">
+                <img 
+                  src="/section2Overlay.png" 
+                  alt="bg image" 
+                  className="w-full md:max-lg:h-[3rem] lg:rounded-full lg:rounded-tr-none lg:rounded-br-none overflow-hidden" 
+                />
+              </div>
             </div>
 
             {/* class_3 */}
-            <div className="03 bg-white flex flex-col justify-center items-center px-2 md:max-lg:col-span-2 md:max-lg:rounded-bl-[2.5rem] ">
-            <div className="w-[75%]"><img src="/google_logo.png" alt=""/></div>
-            <div><p className="text-28 text-black font-QuickSand font-bold">4.9<span className="font-medium">/5</span></p></div>
-            <div className="w-[75%]"><img src="/hodnoceni-5.png" alt="" /></div>
+            <div className="03 bg-white flex flex-col justify-center items-center px-2 md:max-lg:col-span-2 md:max-lg:rounded-bl-[2.5rem]">
+              <div className="w-[60%]"><img src="/google_logo.png" alt=""/></div>
+              <div><p className="text-28 text-black font-QuickSand font-bold">4.9<span className="font-medium">/5</span></p></div>
+              <div className="w-[75%]"><img src="/hodnoceni-5.png" alt="" /></div>
             </div>
 
             {/* Class_4 */}
@@ -96,15 +94,14 @@ const Section2 = () => {
               <div><p className="text-14 font-QuickSand font-bold">Programováno</p></div>
               <div><p className="text-28 text-black font-QuickSand font-bold">5,000 h</p></div>
               <div className="psani-text h-10">
-                    <p className="typewrite text-16 md:text-16 text-black font-medium font-QuickSnad">
-                      <Typewriter text="Hello World" speed={150} />
-                    </p>
-                  </div>
+                <p className="typewrite text-16 md:text-16 text-black font-medium font-QuickSnad">
+                  <Typewriter text="Hello World" speed={150} />
+                </p>
+              </div>
             </div>
-
           </div>
-          {/* </div> */}
-          {/* Right animation  */}
+          
+          {/* Right animation */}
           <div className="w-full my-4 md:w-[20%] flex flex-col md:flex-row items-center justify-center">
             <div className="elementor-image w-full bg-custom-red p-4">
               {/* Swiper container */}
@@ -148,3 +145,4 @@ const Section2 = () => {
 };
 
 export default Section2;
+
