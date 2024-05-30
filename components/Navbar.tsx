@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NAV_LINK } from "@/constant";
 import Image from "next/image";
-import { FaPhone, FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaInstagram, FaPhoneAlt, FaRegBuilding } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaInstagram, FaPhoneAlt, FaRegBuilding } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { VscThreeBars } from "react-icons/vsc";
 import Link from "next/link";
@@ -73,7 +73,7 @@ const Navbar = () => {
           >
             <Link href={link.href}>
               <div className="flex items-center justify-around w-full">
-                <span className="transition-all duration-300 ease-in-out border-b-2 border-transparent text-16 font-Baloo font-bold text-black hover:border-custom-red">
+                <span className="transition-all duration-300 ease-in-out border-b-2 border-transparent text-16 font-Baloo font-medium text-black hover:border-custom-red">
                   {link.label}
                 </span>
               </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
       </ul>
       <div className="hidden lg:flex lg:border-l sm:border-gray-300 h-16" />
       <div className="hidden lg:flex items-center justify-center gap-2">
-        <FaPhone className="text-xl text-custom-red hover:text-black" />
+        <FaPhoneAlt className="text-xl text-custom-red hover:text-black" />
         <span className="text-16 font-Quicksand font-semibold hover:text-custom-red">+420 608 657 281</span>
       </div>
       <div
@@ -123,94 +123,94 @@ const Navbar = () => {
         </div>
       )} */}
 
-{isOverlayVisible && (
-  <div className="fixed inset-0 z-40 flex items-start justify-end bg-custom-gr p-8">
-    <div className="w-full h-auto md:mt-2 absolute top-0 right-0 flex flex-col items-start justify-start gap-4 bg-white p-8 rounded-3xl md:w-1/2">
-      <button
-        className="absolute top-4 right-4 text-4xl font-medium text-black"
-        onClick={toggleOverlay}
-      >
-        &times;
-      </button>
-      <Image src="/logo.svg" alt="Logo" width={167} height={40} />
-      <input
-        type="text"
-        placeholder="Vyhledávání"
-        className="w-full mt-4 p-2 border border-gray-300 bg-custom-gray rounded-md"
-      />
+      {isOverlayVisible && (
+        <div className="fixed inset-0 z-40 flex items-start justify-end bg-custom-gr p-8">
+          <div className="w-full h-auto md:mt-2 absolute top-0 right-0 flex flex-col items-start justify-start gap-4 bg-white p-8 rounded-3xl md:w-1/2">
+            <button
+              className="absolute top-4 right-4 text-4xl font-medium text-black"
+              onClick={toggleOverlay}
+            >
+              &times;
+            </button>
+            <Image src="/logo.svg" alt="Logo" width={167} height={40} />
+            <input
+              type="text"
+              placeholder="Vyhledávání"
+              className="w-full mt-4 p-2 border border-gray-300 bg-custom-gray rounded-md"
+            />
 
-      <ul className="flex flex-wrap gap-2 items-center mt-4">
-        {NAV_LINK.map((link, index) => (
-          <li key={link.key} className="mb-2">
-            <Link href={link.href}>
-              <span className="text-14 font-Baloo font-semibold text-black hover:text-custom-red">
-                {link.label}
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+            <ul className="flex flex-wrap gap-2 items-center mt-4">
+              {NAV_LINK.map((link, index) => (
+                <li key={link.key} className="mb-2">
+                  <Link href={link.href}>
+                    <span className="text-14 font-Baloo font-semibold text-black hover:text-custom-red">
+                      {link.label}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
-      <hr className="w-full border-custom-gray" />
+            <hr className="w-full border-custom-gray" />
 
-      <div className="flex flex-col items-start mt-4">
-        <div>
-          <h2 className="text-28 font-Balooc text-custom-red font-extrabold">Kontaktujte O nás</h2>
+            <div className="flex flex-col items-start mt-4">
+              <div>
+                <h2 className="text-28 font-Balooc text-custom-red font-extrabold">Kontaktujte O nás</h2>
+              </div>
+
+              <div className="flex gap-2 pt-4">
+                <div className="">
+                  <FaPhoneAlt className="text-xl text-custom-red" />
+                </div>
+                <div>
+                  <p className="text-black font-normal text-14 font-Baloo">
+                    Zavolejte nám
+                  </p>
+                  <p className="text-black font-medium text-14 font-Baloo">
+                    +420 608 657 281
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-2 pt-4">
+                <div className="">
+                  <MdEmail className="text-xl text-custom-red" />
+                </div>
+                <div>
+                  <p className="text-black font-normal text-14 font-Baloo">
+                    Napište nám
+                  </p>
+                  <p className="text-black font-medium text-14 font-Baloo">
+                    info@expert-dev.cz
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-2 pt-4">
+                <div className="">
+                  <FaRegBuilding className="text-xl text-custom-red" />
+                </div>
+                <div>
+                  <p className="text-black font-normal text-14 font-Baloo">
+                    Adresa kanceláře
+                  </p>
+                  <p className="text-black font-medium text-14 font-Baloo">
+                    třída Tomáše Bati 87<br />
+                    760 01 Zlín, Česká republika
+                  </p>
+                </div>
+              </div>
+              <div className="text-2xl flex mt-4 space-x-2">
+                <a href="#" className="bg-custom-red rounded-full p-2 text-white"><FaFacebook /></a>
+                <a href="#" className="bg-custom-red rounded-full p-2 text-white"><FaTwitter /></a>
+                <a href="#" className="bg-custom-red rounded-full p-2 text-white"><FaLinkedin /></a>
+                <a href="#" className="bg-custom-red rounded-full p-2 text-white"><FaYoutube /></a>
+                <a href="#" className="bg-custom-red rounded-full p-2 text-white"><FaInstagram /></a>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div className="flex gap-2 pt-4">
-          <div className="">
-            <FaPhoneAlt className="text-xl text-custom-red" />
-          </div>
-          <div>
-            <p className="text-black font-normal text-14 font-Baloo">
-              Zavolejte nám
-            </p>
-            <p className="text-black font-medium text-14 font-Baloo">
-              +420 608 657 281
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-2 pt-4">
-          <div className="">
-            <MdEmail className="text-xl text-custom-red" />
-          </div>
-          <div>
-            <p className="text-black font-normal text-14 font-Baloo">
-              Napište nám
-            </p>
-            <p className="text-black font-medium text-14 font-Baloo">
-              info@expert-dev.cz
-            </p>
-          </div>
-        </div>
-
-        <div className="flex gap-2 pt-4">
-          <div className="">
-            <FaRegBuilding className="text-xl text-custom-red" />
-          </div>
-          <div>
-            <p className="text-black font-normal text-14 font-Baloo">
-              Adresa kanceláře
-            </p>
-            <p className="text-black font-medium text-14 font-Baloo">
-              třída Tomáše Bati 87<br />
-              760 01 Zlín, Česká republika
-            </p>
-          </div>
-        </div>
-        <div className="text-2xl flex mt-4 space-x-2">
-          <a href="#" className="bg-custom-red rounded-full p-2 text-white"><FaFacebook /></a>
-          <a href="#" className="bg-custom-red rounded-full p-2 text-white"><FaTwitter /></a>
-          <a href="#" className="bg-custom-red rounded-full p-2 text-white"><FaLinkedin /></a>
-          <a href="#" className="bg-custom-red rounded-full p-2 text-white"><FaYoutube /></a>
-          <a href="#" className="bg-custom-red rounded-full p-2 text-white"><FaInstagram /></a>
-        </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
 
     </nav>
   );

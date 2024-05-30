@@ -99,7 +99,7 @@ const Section2 = () => {
           </div>
           {/* </div> */}
           {/* Right animation  */}
-          <div className="w-full my-4 md:w-[20%] flex flex-col md:flex-row items-center justify-center">
+          <div className="w-full my-4 md:w-[25%] flex flex-col md:flex-row items-center justify-center">
             <div className="elementor-image w-full bg-custom-red p-4">
               {/* Swiper container */}
               <Swiper
