@@ -55,10 +55,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`flex items-center justify-between px-6 py-4 cursor-pointer z-30 shadow-xl bg-white ring-1 ring-slate-100 fixed  ${scrolling ? "w-[100%]" : "md:rounded-full md:w-[90%] md:shadow-xl md:ring-1 md:top-10 fourK:w-[55%] fourK:top-20 left-0 right-0 ml-auto mr-auto"
+      className={`flex items-center justify-between px-6 py-4 cursor-pointer z-30 bg-white ring-1 ring-slate-100 fixed  ${scrolling ? "w-[100%]" : "md:rounded-full md:w-[90%] md:ring-1 md:top-10 fourK:w-[55%] fourK:top-20 left-0 right-0 ml-auto mr-auto"
         } `}
       style={{
         borderBottomLeftRadius: scrolling ? "" : "0",
+        boxShadow: 'rgba(0, 0, 0, 0.5) 0px 0px 38px -21px',
       }}
     >
       <Image src="/logo.svg" alt="Logo" width={167} height={40} />
