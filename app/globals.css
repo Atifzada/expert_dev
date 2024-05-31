@@ -41,6 +41,12 @@
   border-left: 2px dotted rgba(160, 157, 157, 0.5); /* Add dotted line */
 }
 
+.flat-dotted-line {
+  position: relative;
+  width: 150px;
+  border-bottom: 2px dotted rgba(160, 157, 157, 0.5); /* Add dotted line */
+}
+
 @keyframes moveCircle {
   from {
     top: -10px; /* Adjust to start at the center */
@@ -59,7 +65,10 @@
   }
 }
 
-.circle {
+
+
+
+.long-circle {
   width: 15px;
   height: 15px;
   background-color: custom-red; /* Custom red */
@@ -71,9 +80,34 @@
   animation: moveCircle 12s linear infinite alternate; /* Default animation */
 }
 
-.reverse-animation {
+.reverse-long-circle {
   animation: moveCircleReverse 12s linear infinite alternate; /* Default animation */
   /* animation-name: moveCircleReverse; Apply reverse animation for 2nd circle */
+}
+
+@keyframes moveLeftRight {
+  from {
+    left: -20px; /* Adjust to start at the center */
+  }
+  to {
+    left: 130px; /* Adjust to end at the center */
+  }
+}
+
+.flat-circle {
+  width: 15px;
+  height: 15px;
+  background-color: custom-red; /* Custom red */
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px; /* Adjust to start at the center */
+  left: 50%;
+  transform: translateX(100%);
+  animation: moveLeftRight 12s linear infinite alternate; /* Default animation */
+}
+
+.reverse-flat-circle {
+  animation: moveLeftRight 12s linear infinite alternate-reverse; /* Default animation */
 }
 
 @keyframes scaleLoop {
